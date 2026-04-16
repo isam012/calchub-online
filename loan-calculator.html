@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loan & EMI Calculator 2026 – See Total Cost Before You Borrow</title>
+<meta name="description" content="Calculate exact monthly EMI, total interest & real loan cost for any loan. See how much you really pay. Free loan calculator for USA, UK, India & worldwide.">
+<meta name="keywords" content="loan calculator, EMI calculator, personal loan calculator, loan EMI calculator 2026, monthly loan payment calculator, how much will my loan cost, total loan interest calculator, loan repayment calculator UK, home loan EMI calculator India, business loan calculator">
+<meta name="robots" content="index, follow">
+<meta name="author" content="CalcHub a Sana product">
+<link rel="canonical" href="https://calchub-online-gamma.vercel.app/loan-calculator.html">
+<meta property="og:title" content="Loan & EMI Calculator 2026 – Real Cost Revealed">
+<meta property="og:description" content="See your exact monthly EMI and total loan cost before you borrow. Free, instant, works worldwide.">
+<meta property="og:url" content="https://calchub-online-gamma.vercel.app/loan-calculator.html">
+<meta name="google-site-verification" content="JEx3Q5bruk645FmL-3jORhNenlTzoXB96EmVAMGEuHA">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DSB7Z1TD41"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DSB7Z1TD41');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How is EMI calculated?","acceptedAnswer":{"@type":"Answer","text":"EMI = P × r × (1+r)^n / [(1+r)^n - 1], where P = principal, r = monthly rate, n = months. Example: $10,000 at 12% for 3 years = $332/month."}},{"@type":"Question","name":"What is a good personal loan interest rate?","acceptedAnswer":{"@type":"Answer","text":"Excellent credit (750+): 6–10%. Good credit (700+): 10–15%. Fair credit: 15–25%. Average US personal loan rate: ~12%. Always compare multiple lenders."}},{"@type":"Question","name":"How to reduce loan EMI?","acceptedAnswer":{"@type":"Answer","text":"Choose longer tenure (reduces EMI but increases total interest), improve credit score before applying, make larger down payment, or negotiate lower rate with good credit history."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Loan EMI Calculator","url":"https://calchub-online-gamma.vercel.app/loan-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:#f8f9fa;color:#1a1a1a;font-size:15px;line-height:1.7;}
+a{text-decoration:none;color:inherit;}
+header{background:#0f172a;padding:0 20px;position:sticky;top:0;z-index:999;box-shadow:0 2px 20px rgba(0,0,0,.3);}
+.hdr{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.logo{font-size:20px;font-weight:800;color:#fff;letter-spacing:-0.5px;}
+.logo span{color:#3b82f6;}
+.logo small{font-size:10px;color:#64748b;display:block;font-weight:400;}
+nav a{font-size:13px;color:#94a3b8;padding:6px 12px;border-radius:6px;font-weight:500;transition:all .15s;margin-left:2px;}
+nav a:hover{background:#1e293b;color:#fff;}
+.bc{background:#fff;border-bottom:1px solid #e2e8f0;padding:10px 20px;font-size:13px;}
+.bci{max-width:1200px;margin:0 auto;color:#64748b;}
+.bc a{color:#3b82f6;}
+.bc span{margin:0 6px;color:#cbd5e1;}
+.hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 60%,#0f172a 100%);padding:48px 20px 56px;color:#fff;}
+.hero-inner{max-width:1200px;margin:0 auto;}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:#1e3a5f;border:1px solid #3b82f6;border-radius:20px;padding:5px 14px;font-size:12px;color:#93c5fd;margin-bottom:16px;}
+.hero h1{font-size:clamp(22px,4vw,40px);font-weight:800;line-height:1.2;margin-bottom:10px;letter-spacing:-1px;}
+.hero h1 .hl{color:#3b82f6;}
+.hook{background:linear-gradient(90deg,#dc2626,#b91c1c);border-radius:8px;padding:14px 18px;margin:16px 0 0;display:flex;align-items:center;gap:12px;}
+.hook p{font-size:14px;font-weight:600;color:#fff;line-height:1.5;}
+.hook p span{font-size:18px;color:#fef08a;}
+.wrap{max-width:1200px;margin:0 auto;padding:28px 20px;display:grid;grid-template-columns:1fr 340px;gap:28px;}
+.calc-wrap{background:#fff;border-radius:14px;box-shadow:0 2px 20px rgba(0,0,0,.06);overflow:hidden;}
+.calc-header{background:#0f172a;padding:18px 22px;display:flex;align-items:center;gap:10px;}
+.calc-header h2{font-size:16px;font-weight:700;color:#fff;margin:0;}
+.calc-header .badge{background:#3b82f6;color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:10px;}
+.calc-body{padding:22px;}
+.stabs{display:flex;gap:6px;margin-bottom:20px;background:#f1f5f9;border-radius:8px;padding:4px;}
+.stab{flex:1;padding:8px;border:none;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;background:transparent;color:#64748b;transition:all .15s;}
+.stab.active{background:#fff;color:#0f172a;box-shadow:0 1px 4px rgba(0,0,0,.1);}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:14px;}
+.fg label{font-size:12px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:0.4px;}
+.fg input,.fg select{padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:8px;font-size:14px;font-family:inherit;background:#f9fafb;color:#1a1a1a;width:100%;transition:border-color .15s;}
+.fg input:focus,.fg select:focus{outline:none;border-color:#3b82f6;background:#fff;box-shadow:0 0 0 3px rgba(59,130,246,.1);}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.cbtn{width:100%;padding:15px;background:linear-gradient(135deg,#3b82f6,#2563eb);color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:6px;touch-action:manipulation;transition:all .15s;}
+.cbtn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(37,99,235,.35);}
+.res-wrap{display:none;margin-top:18px;}
+.res-wrap.show{display:block;}
+.res-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px;}
+.res-card{background:#f8faff;border:1.5px solid #dbeafe;border-radius:10px;padding:14px;text-align:center;}
+.res-card.primary{background:linear-gradient(135deg,#eff6ff,#dbeafe);border-color:#93c5fd;}
+.res-label{font-size:10px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;}
+.res-value{font-size:22px;font-weight:800;color:#2563eb;font-family:monospace;line-height:1;}
+.res-value.green{color:#16a34a;}
+.res-value.red{color:#dc2626;}
+.insight-box{background:linear-gradient(135deg,#fef2f2,#fee2e2);border:1.5px solid #fecaca;border-radius:10px;padding:16px;margin:14px 0;}
+.insight-box .ib-title{font-size:13px;font-weight:700;color:#991b1b;margin-bottom:6px;display:flex;align-items:center;gap:6px;}
+.insight-box p{font-size:13px;color:#7f1d1d;line-height:1.7;}
+.insight-box .big{font-size:20px;font-weight:800;color:#dc2626;}
+.warn-box{background:#fffbeb;border:1.5px solid #fcd34d;border-radius:10px;padding:14px;margin:10px 0;font-size:13px;color:#92400e;}
+.compare-wrap{background:#fff;border:1.5px solid #e2e8f0;border-radius:12px;padding:18px;margin-top:14px;}
+.compare-title{font-size:14px;font-weight:700;color:#1a1a1a;margin-bottom:14px;}
+.compare-table{width:100%;border-collapse:collapse;font-size:13px;}
+.compare-table th{background:#0f172a;color:#fff;padding:8px 12px;text-align:left;font-size:12px;}
+.compare-table td{padding:8px 12px;border-bottom:1px solid #f1f5f9;}
+.compare-table tr.best td{background:#f0fdf4;font-weight:700;color:#16a34a;}
+.prog-wrap{margin:14px 0;}
+.prog-label{display:flex;justify-content:space-between;font-size:12px;font-weight:600;margin-bottom:5px;}
+.prog-bar{height:10px;background:#e2e8f0;border-radius:10px;overflow:hidden;}
+.prog-fill{height:100%;border-radius:10px;transition:width .8s ease;}
+.prog-fill.blue{background:linear-gradient(90deg,#3b82f6,#2563eb);}
+.content-section{background:#fff;border-radius:14px;padding:28px;margin-top:24px;box-shadow:0 2px 12px rgba(0,0,0,.04);}
+.content-section h2{font-size:20px;font-weight:800;margin-bottom:14px;color:#0f172a;padding-bottom:10px;border-bottom:2px solid #e2e8f0;}
+.content-section h3{font-size:16px;font-weight:700;margin:20px 0 8px;color:#1e293b;}
+.content-section p{font-size:14px;color:#475569;line-height:1.9;margin-bottom:12px;}
+.content-section ul,.content-section ol{padding-left:20px;margin-bottom:12px;}
+.content-section li{font-size:14px;color:#475569;line-height:1.9;margin-bottom:4px;}
+.did-you-know{background:linear-gradient(135deg,#f0f9ff,#e0f2fe);border-left:4px solid #3b82f6;border-radius:0 10px 10px 0;padding:16px 18px;margin:18px 0;}
+.did-you-know .dyk-title{font-size:12px;font-weight:800;color:#0369a1;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;}
+.did-you-know p{font-size:14px;color:#0c4a6e;margin:0;font-weight:500;}
+.money-tip{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-left:4px solid #16a34a;border-radius:0 10px 10px 0;padding:16px 18px;margin:18px 0;}
+.money-tip .mt-title{font-size:12px;font-weight:800;color:#166534;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;}
+.money-tip p{font-size:14px;color:#14532d;margin:0;font-weight:500;}
+.example-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0;}
+.example-card{background:#f8faff;border:1.5px solid #dbeafe;border-radius:10px;padding:16px;}
+.example-card .flag{font-size:24px;margin-bottom:6px;}
+.example-card h4{font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px;}
+.example-card p{font-size:13px;color:#475569;line-height:1.7;margin:0;}
+.example-card .ex-num{font-size:20px;font-weight:800;color:#2563eb;margin:6px 0;}
+.ps-card{background:#fff;border:1.5px solid #e2e8f0;border-radius:10px;padding:18px;margin-bottom:12px;}
+.ps-problem{font-size:13px;font-weight:700;color:#dc2626;margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.ps-solution{font-size:13px;color:#475569;line-height:1.8;}
+.ps-solution .sol-tag{display:inline-block;background:#dcfce7;color:#166534;font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;margin-right:4px;}
+.faq-item{border-bottom:1px solid #f1f5f9;}
+.faq-item:last-child{border:none;}
+.faq-q{font-size:14px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:16px 0;color:#1e293b;touch-action:manipulation;}
+.faq-q:hover{color:#2563eb;}
+.faq-arrow{font-size:12px;color:#94a3b8;transition:transform .2s;flex-shrink:0;}
+.faq-item.open .faq-arrow{transform:rotate(180deg);}
+.faq-a{font-size:13px;color:#64748b;line-height:1.9;padding-bottom:14px;display:none;}
+.faq-item.open .faq-a{display:block;}
+.paa-item{background:#f8faff;border:1.5px solid #dbeafe;border-radius:10px;padding:14px 16px;margin-bottom:8px;cursor:pointer;}
+.paa-q{font-size:14px;font-weight:600;color:#1e293b;display:flex;justify-content:space-between;align-items:center;}
+.paa-a{font-size:13px;color:#64748b;line-height:1.8;margin-top:8px;display:none;padding-top:8px;border-top:1px solid #e2e8f0;}
+.paa-item.open .paa-a{display:block;}
+.sidebar{display:flex;flex-direction:column;gap:18px;}
+.side-card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 2px 12px rgba(0,0,0,.04);}
+.side-card h3{font-size:13px;font-weight:700;margin-bottom:12px;padding-bottom:8px;border-bottom:1.5px solid #f1f5f9;color:#0f172a;text-transform:uppercase;letter-spacing:0.4px;}
+.side-links{list-style:none;}
+.side-links li{margin-bottom:6px;}
+.side-links li a{font-size:13px;color:#3b82f6;display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:7px;border:1px solid #e2e8f0;transition:all .15s;}
+.side-links li a:hover{background:#eff6ff;border-color:#93c5fd;}
+.adbox{background:#f8faff;border:1.5px dashed #cbd5e1;border-radius:10px;padding:14px;text-align:center;color:#94a3b8;font-size:12px;min-height:90px;display:flex;align-items:center;justify-content:center;}
+.qstats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+.qstat{background:#f1f5f9;border-radius:8px;padding:12px;text-align:center;}
+.qstat .qn{font-size:18px;font-weight:800;color:#2563eb;}
+.qstat .ql{font-size:11px;color:#64748b;margin-top:2px;}
+.try-next{background:linear-gradient(135deg,#0f172a,#1e3a5f);border-radius:12px;padding:20px;color:#fff;margin-top:14px;}
+.try-next h3{font-size:14px;font-weight:700;margin-bottom:12px;color:#93c5fd;}
+.try-links{display:flex;flex-direction:column;gap:8px;}
+.try-link{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:10px 12px;font-size:13px;color:#e2e8f0;transition:all .15s;}
+.try-link:hover{background:rgba(255,255,255,.12);color:#fff;}
+footer{background:#0f172a;color:#64748b;padding:44px 20px 20px;margin-top:56px;}
+.ftr{max-width:1200px;margin:0 auto;}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:28px;margin-bottom:32px;}
+.fcol .fl{font-size:18px;font-weight:800;color:#fff;margin-bottom:2px;}
+.fcol .fl span{color:#3b82f6;}
+.fcol .fs{font-size:11px;color:#475569;margin-bottom:10px;}
+.fcol h4{font-size:11px;font-weight:700;color:#475569;margin-bottom:10px;text-transform:uppercase;letter-spacing:0.5px;}
+.fcol a{display:block;font-size:12px;color:#64748b;margin-bottom:6px;transition:color .15s;}
+.fcol a:hover{color:#fff;}
+.fbot{border-top:1px solid #1e293b;padding-top:18px;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.fbot a{color:#3b82f6;}
+.hidden{display:none!important;}
+@media(max-width:900px){.wrap{grid-template-columns:1fr;}.sidebar{order:-1;}}
+@media(max-width:600px){.fr{grid-template-columns:1fr;}.res-grid{grid-template-columns:1fr;}.example-grid{grid-template-columns:1fr;}nav{display:none;}}
+
+.curr-sel{background:#1e293b;border:1px solid #334155;color:#e2e8f0;font-size:12px;padding:6px 10px;border-radius:8px;cursor:pointer;font-family:inherit;font-weight:600;}
+.curr-sel:focus{outline:none;border-color:#3b82f6;}
+</style>
+</head>
+<body>
+<header>
+  <div class="hdr">
+    <a href="index.html" class="logo">Calc<span>Hub</span><small>a Sana product</small></a>
+    <nav>
+      <a href="index.html#finance">Finance</a>
+      <a href="index.html#health">Health</a>
+      <a href="index.html#math">Math</a>
+      <a href="index.html#other">Other</a>
+    </nav>
+  </div>
+</header>
+<div class="bc"><div class="bci"><a href="index.html">Home</a><span>›</span><a href="index.html#finance">Financial Calculators</a><span>›</span><span>Loan & EMI Calculator</span></div></div>
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">🌍 Used Worldwide &nbsp;|&nbsp; ⚡ Instant Results &nbsp;|&nbsp; 100% Free</div>
+    <h1>Loan & EMI Calculator 2026 –<br><span class="hl">Know Your Real Cost Before You Borrow</span></h1>
+    <div class="hook">
+      <p>On a $15,000 personal loan at 18% APR for 3 years, you pay <span>$4,412 extra in interest.</span> That's 29% more than you borrowed. See YOUR real numbers instantly.</p>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div>
+    
+
+    <div class="calc-wrap">
+      <div class="calc-header">
+        <span style="font-size:20px;">💳</span>
+        <h2>Loan / EMI Calculator</h2>
+        <span class="badge">FREE</span>
+      </div>
+      <div class="calc-body">
+        <div class="stabs">
+          <button class="stab active" onclick="setTab('basic',this)">Calculate EMI</button>
+          <button class="stab" onclick="setTab('compare',this)">Compare Terms</button>
+          <button class="stab" onclick="setTab('afford',this)">Can I Afford It?</button>
+        </div>
+
+        <div id="tab-basic">
+          <div class="fr">
+            <div class="fg"><label>Loan Amount</label><input type="number" id="la" value="15000"></div>
+            <div class="fg"><label>Annual Interest Rate (%)</label><input type="number" id="lr" value="9" step="0.01"></div>
+          </div>
+          <div class="fr">
+            <div class="fg"><label>Loan Term</label><input type="number" id="lt" value="36"></div>
+            <div class="fg"><label>Unit</label><select id="lu"><option value="1">Months</option><option value="12">Years</option></select></div>
+          </div>
+          <div class="fg"><label>Loan Type</label>
+            <select id="ltype">
+              <option value="personal">Personal Loan</option>
+              <option value="home">Home Loan / Mortgage</option>
+              <option value="auto">Auto Loan</option>
+              <option value="student">Student Loan</option>
+              <option value="business">Business Loan</option>
+            </select>
+          </div>
+          <button class="cbtn" onclick="calcLoan()">🔢 Calculate My EMI</button>
+          <div class="res-wrap" id="loanRes">
+            <div class="res-grid">
+              <div class="res-card primary"><div class="res-label">Monthly EMI</div><div class="res-value" id="l-emi">—</div></div>
+              <div class="res-card"><div class="res-label">Total Interest</div><div class="res-value red" id="l-interest">—</div></div>
+              <div class="res-card"><div class="res-label">Total Payment</div><div class="res-value" id="l-total">—</div></div>
+            </div>
+            <div class="prog-wrap">
+              <div class="prog-label"><span style="color:#2563eb;">Principal <span id="l-pp">0%</span></span><span style="color:#dc2626;">Interest <span id="l-ip">0%</span></span></div>
+              <div class="prog-bar"><div class="prog-fill blue" id="l-prog" style="width:50%;"></div></div>
+            </div>
+            <div class="insight-box"><div class="ib-title">😳 What This Loan Really Costs You</div><p id="l-insight">Loading...</p></div>
+            <div class="warn-box">⚠️ <strong>Hidden Cost Warning:</strong> Some lenders charge origination fees (1-8% of loan), prepayment penalties, and late fees. Always ask for the APR (not just interest rate) to compare true costs.</div>
+          </div>
+        </div>
+
+        <div id="tab-compare" style="display:none;">
+          <div class="fg"><label>Loan Amount</label><input type="number" id="cl" value="10000"></div>
+          <div class="fg"><label>Interest Rate (%)</label><input type="number" id="cr" value="12" step="0.01"></div>
+          <button class="cbtn" onclick="compareTerms()">⚡ Compare All Terms</button>
+          <div class="res-wrap" id="compareRes">
+            <div class="compare-wrap">
+              <div class="compare-title">📊 Payment by Loan Term</div>
+              <table class="compare-table"><thead><tr><th>Term</th><th>Monthly EMI</th><th>Total Interest</th><th>Total Cost</th></tr></thead><tbody id="compare-tbody"></tbody></table>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-afford" style="display:none;">
+          <div class="fg"><label>Your Monthly Income ($)</label><input type="number" id="ainc" value="5000"></div>
+          <div class="fg"><label>Existing Monthly Debt ($)</label><input type="number" id="adebt" value="500" placeholder="Car, credit cards, etc."></div>
+          <div class="fr">
+            <div class="fg"><label>Interest Rate (%)</label><input type="number" id="arate" value="9" step="0.01"></div>
+            <div class="fg"><label>Loan Term (months)</label><input type="number" id="aterm" value="36"></div>
+          </div>
+          <button class="cbtn" onclick="calcAfford()">💡 How Much Can I Borrow?</button>
+          <div class="res-wrap" id="affordRes"><div id="afford-content"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h2>Real Loan Examples – USA, UK & Global</h2>
+      <div class="example-grid">
+        <div class="example-card"><div class="flag">🇺🇸</div><h4>USA – Personal Loan</h4><p>$20,000 at 11% APR for 5 years</p><div class="ex-num">$435/month</div><p>Total interest: <strong style="color:#dc2626;">$6,100</strong> over 5 years.</p></div>
+        <div class="example-card"><div class="flag">🇬🇧</div><h4>UK – Personal Loan</h4><p>£10,000 at 8.9% APR for 3 years</p><div class="ex-num">£317/month</div><p>Total interest: <strong style="color:#dc2626;">£1,412</strong> over 3 years.</p></div>
+        <div class="example-card"><div class="flag">🇮🇳</div><h4>India – Home Loan EMI</h4><p>₹50 lakh at 8.5% for 20 years</p><div class="ex-num">₹43,391/month</div><p>Total interest: <strong style="color:#dc2626;">₹54.1 lakh</strong> — more than the loan!</p></div>
+        <div class="example-card"><div class="flag">🇦🇺</div><h4>Australia – Car Loan</h4><p>A$30,000 at 7.5% for 5 years</p><div class="ex-num">A$601/month</div><p>Total interest: <strong style="color:#dc2626;">A$6,060</strong> — 20% extra.</p></div>
+      </div>
+      <div class="did-you-know">
+        <div class="dyk-title">💡 Most People Don't Realize This</div>
+        <p>When you borrow money, you're not just paying it back — you're renting it. At 12% APR, every $1,000 borrowed costs you $120 per year in rent. For 5 years: $600 extra per thousand borrowed.</p>
+      </div>
+    </div>
+
+    <div class="content-section">
+      <h2>How Loan EMI is Calculated — Simply Explained</h2>
+      <p>EMI stands for <strong>Equated Monthly Installment</strong>. It's the fixed amount you pay every month to repay your loan. Every EMI is split into two parts: <strong>principal</strong> (the amount you borrowed) and <strong>interest</strong> (the cost of borrowing).</p>
+      <h3>The Formula Behind EMI</h3>
+      <p>EMI = P × r × (1+r)^n / [(1+r)^n – 1]</p>
+      <p>Where <strong>P</strong> = loan amount, <strong>r</strong> = monthly interest rate (annual rate ÷ 12), <strong>n</strong> = total months</p>
+      <div class="did-you-know"><div class="dyk-title">💡 Did You Know?</div><p>In the early months of any loan, most of your EMI goes to interest, not principal. If you have a $10,000 loan at 12% for 3 years: Month 1 payment is $332, but only $232 goes to reducing the loan — $100 goes straight to the bank as interest.</p></div>
+      <h3>Why Loan Term Matters More Than You Think</h3>
+      <p>Choosing a longer loan term lowers your monthly payment but dramatically increases total cost. A $20,000 loan at 10%: 3-year term = $645/month, $3,210 total interest. 5-year term = $425/month, $5,496 total interest. That's $2,286 more for the "comfort" of lower payments.</p>
+      <h3>Types of Loans and Their Typical Rates</h3>
+      <ul>
+        <li><strong>Personal Loan:</strong> 6–25% APR (unsecured, based on credit)</li>
+        <li><strong>Home/Mortgage Loan:</strong> 6–8% (secured by property)</li>
+        <li><strong>Auto Loan:</strong> 5–14% (secured by vehicle)</li>
+        <li><strong>Student Loan:</strong> 4–8% federal, 5–15% private</li>
+        <li><strong>Business Loan:</strong> 7–25% (varies widely)</li>
+        <li><strong>Credit Card Debt:</strong> 18–30%+ (most expensive)</li>
+      </ul>
+      <div class="money-tip"><div class="mt-title">💰 Money-Saving Tip</div><p>Always compare the APR (Annual Percentage Rate), not just the interest rate. APR includes fees and gives the true cost. A 9% loan with 3% origination fee has an APR of around 12%. Use our calculator to see real cost.</p></div>
+      <h3>How to Get a Lower Loan Rate</h3>
+      <ol>
+        <li>Improve credit score above 720 before applying</li>
+        <li>Compare at least 5 lenders (banks, credit unions, online lenders)</li>
+        <li>Apply with a co-signer if your credit is weak</li>
+        <li>Offer collateral for secured loan at lower rate</li>
+        <li>Reduce existing debt to lower debt-to-income ratio</li>
+        <li>Negotiate — especially with your existing bank</li>
+      </ol>
+    </div>
+
+    <div class="content-section">
+      <h2>Common Loan Problems & Solutions</h2>
+      <div class="ps-card"><div class="ps-problem">😤 "My loan EMI is eating half my salary"</div><div class="ps-solution"><span class="sol-tag">PROBLEM</span> EMI too high relative to income — DTI over 40% is dangerous.<br><br><span class="sol-tag">SOLUTION</span> Refinance to lower rate or longer term. Consolidate multiple loans into one lower-rate loan. Use extra income to make prepayments to reduce principal.</div></div>
+      <div class="ps-card"><div class="ps-problem">😤 "I have 3 loans and can't track payments"</div><div class="ps-solution"><span class="sol-tag">PROBLEM</span> Multiple loans, multiple payments, different rates — high risk of missing payments.<br><br><span class="sol-tag">SOLUTION</span> Debt consolidation loan combines all into one lower payment. Use our <a href="debt-payoff-calculator.html" style="color:#2563eb;">Debt Payoff Calculator</a> to find best strategy.</div></div>
+      <div class="ps-card"><div class="ps-problem">😤 "I was charged more than expected"</div><div class="ps-solution"><span class="sol-tag">PROBLEM</span> Hidden fees: origination fee, prepayment penalty, processing charges not shown upfront.<br><br><span class="sol-tag">SOLUTION</span> Always ask for full cost breakdown. Request APR in writing. Read fine print on prepayment penalties before signing.</div></div>
+    </div>
+
+    <div class="content-section">
+      <h2>Real Questions People Ask About Loans</h2>
+      <div class="paa-item" onclick="this.classList.toggle('open')"><div class="paa-q">How much loan can I get on $50,000 salary? <span>▼</span></div><div class="paa-a">With $50,000 annual salary ($4,167/month), lenders typically approve loans where EMI is max 40-50% of take-home pay. If take-home is $3,500/month, max EMI ≈ $1,400. At 10% for 5 years, this supports roughly a $65,000 loan. But borrow only what you need — less is better.</div></div>
+      <div class="paa-item" onclick="this.classList.toggle('open')"><div class="paa-q">Is it better to pay off a loan early? <span>▼</span></div><div class="paa-a">Usually yes, if no prepayment penalty. Every extra dollar paid reduces principal, which reduces future interest. BUT: check if your loan has prepayment fees (some charge 1-5% of remaining balance). Also consider: if your loan rate is lower than investment returns, investing may be smarter.</div></div>
+      <div class="paa-item" onclick="this.classList.toggle('open')"><div class="paa-q">What happens if I can't pay my loan EMI? <span>▼</span></div><div class="paa-a">Day 1-30: Grace period, late fee charged. Day 30-90: Multiple missed payments hurt credit score significantly. Day 90+: Account sent to collections, major credit damage. Default: Legal action possible. Always contact lender BEFORE missing payments — most have hardship programs and forbearance options.</div></div>
+      <div class="paa-item" onclick="this.classList.toggle('open')"><div class="paa-q">What is the difference between flat rate and reducing rate interest? <span>▼</span></div><div class="paa-a">Flat rate: interest calculated on original loan throughout. Reducing rate: interest calculated on remaining balance (standard). A 10% flat rate loan actually has an effective rate of ~18% on reducing balance. Always clarify which method lenders are using — reducing balance is the honest standard.</div></div>
+      <div class="paa-item" onclick="this.classList.toggle('open')"><div class="paa-q">How to get a personal loan with bad credit? <span>▼</span></div><div class="paa-a">Options: secured loan (use asset as collateral), credit union loans (more flexible than banks), peer-to-peer lenders, co-signer with good credit. Expect higher rates (20-35%). Work on credit improvement: pay bills on time, reduce credit utilization below 30%, dispute errors on credit report.</div></div>
+    </div>
+
+    <div class="content-section">
+      <h2>Frequently Asked Questions – Loan Calculator</h2>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is EMI and how does it work? <span class="faq-arrow">▼</span></div><div class="faq-a">EMI (Equated Monthly Installment) is the fixed monthly amount you pay to repay a loan. It covers both principal repayment and interest charges. Early payments go mostly to interest; later payments go mostly to principal. EMI stays the same throughout the loan term (for fixed-rate loans).</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How does credit score affect loan interest rate? <span class="faq-arrow">▼</span></div><div class="faq-a">Your credit score is the biggest factor in your loan rate. 760+: Best rates (7-10%). 700-759: Good rates (10-14%). 650-699: Fair (14-20%). Below 650: High rates or rejection (20-30%+). A 100-point score improvement can save $50-200/month on a typical loan.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is debt-to-income ratio and why does it matter? <span class="faq-arrow">▼</span></div><div class="faq-a">DTI = Monthly debt payments ÷ Monthly gross income. Lenders want DTI below 36-43%. If you earn $5,000/month and pay $1,500 in debts, DTI = 30%. Too high DTI = loan rejection or higher rates. Reduce DTI by paying off debts or increasing income.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is APR vs interest rate? <span class="faq-arrow">▼</span></div><div class="faq-a">Interest rate = cost of borrowing. APR (Annual Percentage Rate) = interest rate + all fees (origination, processing, insurance). APR gives the true annual cost. Always compare APRs between lenders — a lower rate with higher fees can cost more than a higher rate with no fees.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How long does it take to get a personal loan? <span class="faq-arrow">▼</span></div><div class="faq-a">Online lenders: same day to 3 business days. Banks/credit unions: 1-7 business days. Factors affecting speed: documentation readiness, credit score, loan amount, lender's process. Have ID, income proof, bank statements, and employment details ready to speed up approval.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Should I choose fixed or variable rate loan? <span class="faq-arrow">▼</span></div><div class="faq-a">Fixed rate: same rate throughout — predictable payments, good when rates are rising. Variable rate: starts lower but can increase — good when rates are falling or loan term is short. For loans over 3 years, fixed rate usually provides better peace of mind and budgeting certainty.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is loan prepayment and is it worth it? <span class="faq-arrow">▼</span></div><div class="faq-a">Prepayment = paying more than required EMI. Benefits: reduces principal faster, saves interest, improves credit. Check for prepayment penalties first (some charge 1-5%). For high-interest loans, prepayment is almost always worth it. For low-rate loans under 6%, investing the extra might yield more.</div></div>
+    </div>
+
+    <div class="content-section">
+      <h2>People Also Ask</h2>
+      <div class="paa-item" onclick="this.classList.toggle('open')"><div class="paa-q">How much is EMI for $10,000 loan? <span>▼</span></div><div class="paa-a">$10,000 at 10% for 3 years = $323/month. At 15% for 3 years = $347/month. At 10% for 5 years = $212/month. The rate and term dramatically change both monthly payment and total cost.</div></div>
+      <div class="paa-item" onclick="this.classList.toggle('open')"><div class="paa-q">What is a good loan interest rate in 2026? <span>▼</span></div><div class="paa-a">USA personal loans: 7-12% is excellent, 12-18% is average, above 20% is high. UK personal loans: 5-10% is competitive. Always compare at least 3-5 lenders. Credit unions and online lenders often beat traditional banks.</div></div>
+      <div class="paa-item" onclick="this.classList.toggle('open')"><div class="paa-q">How to calculate total interest on a loan? <span>▼</span></div><div class="paa-a">Total Interest = (Monthly EMI × Number of Months) – Loan Amount. Example: $332/month × 36 months = $11,952 total paid – $10,000 borrowed = $1,952 total interest. Our calculator does this instantly.</div></div>
+      <div class="paa-item" onclick="this.classList.toggle('open')"><div class="paa-q">Can I get a loan without income proof? <span>▼</span></div><div class="paa-a">Difficult but possible: secured loans (using asset as collateral), P2P lending platforms, or family/friends. Without income proof, expect much higher rates or rejection from traditional lenders. Building documented income history first is strongly recommended.</div></div>
+    </div>
+
+    <div class="content-section">
+      <h2>Try These Related Calculators</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px;">
+        <a href="mortgage-calculator.html" style="background:#f0f9ff;border:1.5px solid #bae6fd;border-radius:10px;padding:14px;display:block;"><div style="font-size:20px;margin-bottom:6px;">🏠</div><div style="font-size:13px;font-weight:700;color:#0369a1;">Mortgage Calculator</div><div style="font-size:12px;color:#64748b;margin-top:3px;">Home loan with tax & insurance</div></a>
+        <a href="debt-payoff-calculator.html" style="background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:10px;padding:14px;display:block;"><div style="font-size:20px;margin-bottom:6px;">💰</div><div style="font-size:13px;font-weight:700;color:#166534;">Debt Payoff Calculator</div><div style="font-size:12px;color:#64748b;margin-top:3px;">Pay off debt faster strategy</div></a>
+        <a href="credit-card-payoff-calculator.html" style="background:#fefce8;border:1.5px solid #fde68a;border-radius:10px;padding:14px;display:block;"><div style="font-size:20px;margin-bottom:6px;">💳</div><div style="font-size:13px;font-weight:700;color:#92400e;">Credit Card Payoff</div><div style="font-size:12px;color:#64748b;margin-top:3px;">Clear high-interest card debt</div></a>
+        <a href="compound-interest-calculator.html" style="background:#fdf4ff;border:1.5px solid #e9d5ff;border-radius:10px;padding:14px;display:block;"><div style="font-size:20px;margin-bottom:6px;">🔢</div><div style="font-size:13px;font-weight:700;color:#7c3aed;">Compound Interest</div><div style="font-size:12px;color:#64748b;margin-top:3px;">Grow savings instead of debt</div></a>
+      </div>
+    </div>
+    
+  </div>
+
+  <aside class="sidebar">
+    <div class="side-card">
+      <h3>Quick Reference</h3>
+      <div class="qstats">
+        <div class="qstat"><div class="qn">12%</div><div class="ql">Avg US rate 2026</div></div>
+        <div class="qstat"><div class="qn">36%</div><div class="ql">Max healthy DTI</div></div>
+        <div class="qstat"><div class="qn">720+</div><div class="ql">Good credit score</div></div>
+        <div class="qstat"><div class="qn">APR</div><div class="ql">Always compare this</div></div>
+      </div>
+    </div>
+    
+    <div class="side-card">
+      <h3>Financial Calculators</h3>
+      <ul class="side-links">
+        <li><a href="mortgage-calculator.html">🏠 Mortgage Calculator</a></li>
+        <li><a href="auto-loan-calculator.html">🚗 Auto Loan</a></li>
+        <li><a href="refinance-calculator.html">🔄 Refinance</a></li>
+        <li><a href="debt-payoff-calculator.html">💰 Debt Payoff</a></li>
+        <li><a href="credit-card-payoff-calculator.html">💳 Credit Card</a></li>
+        <li><a href="compound-interest-calculator.html">🔢 Compound Interest</a></li>
+        <li><a href="salary-calculator.html">💼 Salary</a></li>
+        <li><a href="retirement-calculator.html">🏖️ Retirement</a></li>
+      </ul>
+    </div>
+    <div class="try-next">
+      <h3>🚀 Try These Next</h3>
+      <div class="try-links">
+        <a href="debt-payoff-calculator.html" class="try-link">💰 Fastest way to go debt-free</a>
+        <a href="compound-interest-calculator.html" class="try-link">🔢 Grow money instead of debt</a>
+        <a href="retirement-calculator.html" class="try-link">🏖️ Plan your retirement today</a>
+      </div>
+    </div>
+    
+  </aside>
+</div>
+
+<footer>
+  <div class="ftr">
+    <div class="fgrid">
+      <div class="fcol">
+        <div class="fl">Calc<span>Hub</span></div>
+        <div class="fs">a Sana product</div>
+        <p style="font-size:12px;color:#475569;line-height:1.8;">Free financial calculators for everyone. Sana is a technology company building useful digital products worldwide.</p>
+      </div>
+      <div class="fcol">
+        <h4>Home Loans</h4>
+        <a href="mortgage-calculator.html">🏠 Mortgage</a>
+        <a href="refinance-calculator.html">🔄 Refinance</a>
+        <a href="amortization-calculator.html">📊 Amortization</a>
+        <a href="home-affordability-calculator.html">🏡 Home Affordability</a>
+      </div>
+      <div class="fcol">
+        <h4>Loans & Debt</h4>
+        <a href="loan-calculator.html">💳 Loan / EMI</a>
+        <a href="auto-loan-calculator.html">🚗 Auto Loan</a>
+        <a href="credit-card-interest-calculator.html">💳 Card Interest</a>
+        <a href="credit-card-payoff-calculator.html">✂️ Card Payoff</a>
+        <a href="debt-payoff-calculator.html">💰 Debt Payoff</a>
+      </div>
+      <div class="fcol">
+        <h4>Investment & Tax</h4>
+        <a href="compound-interest-calculator.html">🔢 Compound Interest</a>
+        <a href="investment-calculator.html">📈 Investment ROI</a>
+        <a href="retirement-calculator.html">🏖️ Retirement</a>
+        <a href="inflation-calculator.html">💹 Inflation</a>
+        <a href="salary-after-tax-calculator.html">💼 Salary After Tax</a>
+        <a href="income-tax-calculator.html">🧾 Income Tax</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 <strong style="color:#e2e8f0;">CalcHub</strong> — A product of <strong style="color:#3b82f6;">Sana</strong>. For informational purposes only. Not financial advice.</span>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function fm(n,d){d=d===undefined?2:d;return '$'+Number(n).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});}
+function fn(n,d){d=d===undefined?2:d;return Number(n).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});}
+
+function setTab(id, btn) {
+  ['basic','compare','afford'].forEach(function(t){document.getElementById('tab-'+t).style.display=t===id?'block':'none';});
+  document.querySelectorAll('.stab').forEach(function(t){t.classList.remove('active');});
+  btn.classList.add('active');
+}
+
+function calcLoan() {
+  var P=+document.getElementById('la').value;
+  var r=+document.getElementById('lr').value/100/12;
+  var n=+document.getElementById('lt').value * +document.getElementById('lu').value;
+  if(P<=0||n<=0){alert('Please enter valid values');return;}
+  var M=r===0?P/n:P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+  var total=M*n, interest=total-P;
+  document.getElementById('l-emi').textContent=fm(M);
+  document.getElementById('l-interest').textContent=fm(interest,0);
+  document.getElementById('l-total').textContent=fm(total,0);
+  var pct=Math.round(P/total*100);
+  document.getElementById('l-prog').style.width=pct+'%';
+  document.getElementById('l-pp').textContent=pct+'%';
+  document.getElementById('l-ip').textContent=(100-pct)+'%';
+  var ratio=(interest/P*100).toFixed(1);
+  document.getElementById('l-insight').innerHTML='You are paying <span class="big">'+fm(interest,0)+'</span> in total interest — that\'s <strong>'+ratio+'% extra</strong> on top of your '+fm(P,0)+' loan. The lender earns '+fm(interest,0)+' from this loan.';
+  document.getElementById('loanRes').classList.add('show');
+}
+
+function compareTerms() {
+  var P=+document.getElementById('cl').value;
+  var rate=+document.getElementById('cr').value;
+  var terms=[12,24,36,48,60,84];
+  var html=terms.map(function(n){
+    var r=rate/100/12;
+    var M=P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+    var total=M*n,interest=total-P;
+    var best=n===36;
+    return '<tr'+(best?' class="best"':'')+'>'+
+      '<td>'+n+' months ('+(n/12)+' yr)</td>'+
+      '<td>'+fm(M)+'</td><td>'+fm(interest,0)+'</td><td>'+fm(total,0)+'</td></tr>';
+  }).join('');
+  document.getElementById('compare-tbody').innerHTML=html;
+  document.getElementById('compareRes').classList.add('show');
+}
+
+function calcAfford() {
+  var inc=+document.getElementById('ainc').value;
+  var debt=+document.getElementById('adebt').value;
+  var r=+document.getElementById('arate').value/100/12;
+  var n=+document.getElementById('aterm').value;
+  var maxDTI=0.43;
+  var maxPayment=inc*maxDTI-debt;
+  if(maxPayment<=0){document.getElementById('afford-content').innerHTML='<div class="insight-box"><div class="ib-title">⚠️ Debt Too High</div><p>Existing debts exceed safe limit. Pay down debt before taking new loan.</p></div>';document.getElementById('affordRes').classList.add('show');return;}
+  var maxLoan=maxPayment*(Math.pow(1+r,n)-1)/(r*Math.pow(1+r,n));
+  document.getElementById('afford-content').innerHTML=
+    '<div class="res-grid"><div class="res-card primary"><div class="res-label">Max Loan Amount</div><div class="res-value">'+fm(maxLoan,0)+'</div></div>'+
+    '<div class="res-card"><div class="res-label">Max Monthly EMI</div><div class="res-value green">'+fm(maxPayment)+'</div></div>'+
+    '<div class="res-card"><div class="res-label">Current DTI</div><div class="res-value">'+fn(debt/inc*100,0)+'%</div></div></div>'+
+    '<div class="warn-box">⚠️ This is the <strong>maximum</strong> based on 43% DTI rule. We recommend borrowing no more than 80% of this amount for financial safety.</div>';
+  document.getElementById('affordRes').classList.add('show');
+}
+
+// ======= CURRENCY SUPPORT =======
+function getCurrSymbol() {
+  return localStorage.getItem('calchub_currency_symbol') || '$';
+}
+function fmC(n, d) {
+  d = d === undefined ? 2 : d;
+  var sym = getCurrSymbol();
+  return sym + Number(n).toLocaleString('en-US', {minimumFractionDigits: d, maximumFractionDigits: d});
+}
+</script>
+</body>
+</html>

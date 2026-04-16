@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CalcHub – Free Financial Calculators | Mortgage, Loan, Investment & More</title>
+<meta name="description" content="Free financial calculators for mortgage, loan, investment, retirement, compound interest and more. Fast, accurate, works in any currency worldwide.">
+<meta name="keywords" content="mortgage calculator, loan calculator, EMI calculator, compound interest calculator, retirement calculator, investment calculator, refinance calculator, free financial calculator">
+<meta name="robots" content="index, follow">
+<meta name="author" content="CalcHub by Sana">
+<link rel="canonical" href="https://calchub-online-gamma.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CalcHub – Free Financial Calculators">
+<meta property="og:description" content="Free financial calculators for mortgage, loan, investment, retirement and more. Works in any currency.">
+<meta property="og:url" content="https://calchub-online-gamma.vercel.app/">
+<meta property="og:site_name" content="CalcHub">
+<meta name="twitter:card" content="summary">
+<meta name="google-site-verification" content="JEx3Q5bruk645FmL-3jORhNenlTzoXB96EmVAMGEuHA">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DSB7Z1TD41"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DSB7Z1TD41');</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"CalcHub","url":"https://calchub-online-gamma.vercel.app/","description":"Free financial calculators for mortgage, loan, investment, retirement and more","potentialAction":{"@type":"SearchAction","target":"https://calchub-online-gamma.vercel.app/?q={search_term_string}","query-input":"required name=search_term_string"}}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:#f8f9fa;color:#1a1a1a;font-size:15px;line-height:1.6;}
+a{text-decoration:none;color:inherit;}
+
+/* HEADER */
+header{background:#0f172a;padding:0 20px;position:sticky;top:0;z-index:999;box-shadow:0 2px 20px rgba(0,0,0,.3);}
+.hdr{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px;}
+.logo{font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.5px;cursor:pointer;}
+.logo span{color:#3b82f6;}
+.logo small{font-size:10px;color:#64748b;display:block;font-weight:400;letter-spacing:0.3px;}
+
+/* CURRENCY SELECTOR IN HEADER */
+.curr-sel{background:#1e293b;border:1px solid #334155;color:#e2e8f0;font-size:12px;padding:6px 10px;border-radius:8px;cursor:pointer;font-family:inherit;font-weight:600;}
+.curr-sel:focus{outline:none;border-color:#3b82f6;}
+
+nav{display:flex;gap:2px;}
+nav a{font-size:13px;color:#94a3b8;padding:6px 10px;border-radius:6px;font-weight:500;transition:all .15s;}
+nav a:hover{background:#1e293b;color:#fff;}
+
+/* SEARCH BAR */
+.search-wrap{background:#1e293b;border-bottom:1px solid #334155;padding:12px 20px;}
+.search-inner{max-width:1200px;margin:0 auto;display:flex;gap:10px;align-items:center;}
+.search-inner input{flex:1;padding:10px 16px;background:#0f172a;border:1.5px solid #334155;border-radius:8px;color:#e2e8f0;font-size:14px;font-family:inherit;max-width:520px;}
+.search-inner input:focus{outline:none;border-color:#3b82f6;}
+.search-inner input::placeholder{color:#475569;}
+.curr-badge{display:flex;align-items:center;gap:6px;background:#0f172a;border:1px solid #334155;border-radius:8px;padding:6px 12px;font-size:12px;color:#94a3b8;}
+.curr-badge strong{color:#3b82f6;}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 50%,#0f172a 100%);padding:52px 20px 60px;text-align:center;color:#fff;}
+.hero h1{font-size:clamp(24px,5vw,48px);font-weight:800;letter-spacing:-1.5px;margin-bottom:12px;line-height:1.1;}
+.hero h1 em{color:#3b82f6;font-style:normal;}
+.hero p{color:#94a3b8;font-size:15px;max-width:520px;margin:0 auto 10px;}
+.hero-sub{font-size:13px;color:#475569;margin-bottom:0;}
+
+/* STATS ROW */
+.stats-row{background:#1e293b;border-top:1px solid #334155;border-bottom:1px solid #334155;padding:16px 20px;}
+.stats-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:48px;flex-wrap:wrap;}
+.stat{text-align:center;}
+.stat .sn{font-size:20px;font-weight:800;color:#3b82f6;}
+.stat .sl{font-size:11px;color:#64748b;margin-top:2px;text-transform:uppercase;letter-spacing:0.5px;}
+
+/* MAIN */
+.main{max-width:1200px;margin:0 auto;padding:40px 20px;}
+
+/* SECTION HEADER */
+.sec-hdr{display:flex;align-items:center;gap:14px;margin-bottom:8px;}
+.sec-bar{width:4px;height:32px;background:linear-gradient(180deg,#3b82f6,#2563eb);border-radius:4px;flex-shrink:0;}
+.sec-hdr h2{font-size:22px;font-weight:800;color:#0f172a;letter-spacing:-0.5px;}
+.sec-desc{font-size:14px;color:#64748b;margin-bottom:24px;padding-left:18px;border-left:2px solid #e2e8f0;line-height:1.7;}
+
+/* CALCULATOR GRID */
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-bottom:48px;}
+
+/* CALC CARD */
+.ccard{background:#fff;border:1.5px solid #e2e8f0;border-radius:12px;padding:20px;display:block;transition:all .2s;position:relative;cursor:pointer;}
+.ccard:hover{border-color:#3b82f6;box-shadow:0 8px 24px rgba(59,130,246,.12);transform:translateY(-3px);}
+.ccard:active{transform:translateY(-1px);}
+.ccard .ic{font-size:28px;margin-bottom:12px;display:block;}
+.ccard h3{font-size:14px;font-weight:700;margin-bottom:5px;color:#0f172a;line-height:1.3;}
+.ccard p{font-size:12px;color:#64748b;line-height:1.6;}
+.hot-tag{position:absolute;top:10px;right:10px;font-size:9px;font-weight:800;background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;padding:3px 7px;border-radius:10px;text-transform:uppercase;letter-spacing:0.3px;}
+.new-tag{position:absolute;top:10px;right:10px;font-size:9px;font-weight:800;background:linear-gradient(135deg,#10b981,#059669);color:#fff;padding:3px 7px;border-radius:10px;text-transform:uppercase;letter-spacing:0.3px;}
+
+/* CATEGORY COLORS */
+.ccard[data-cat="mortgage"]:hover{border-color:#2563eb;}
+.ccard[data-cat="loan"]:hover{border-color:#7c3aed;}
+.ccard[data-cat="investment"]:hover{border-color:#059669;}
+.ccard[data-cat="tax"]:hover{border-color:#dc2626;}
+
+/* WHY SECTION */
+.why-section{background:#fff;border:1.5px solid #e2e8f0;border-radius:16px;padding:36px;margin:48px 0;}
+.why-section h2{font-size:22px;font-weight:800;margin-bottom:24px;text-align:center;color:#0f172a;}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
+.why-card{text-align:center;padding:20px 16px;background:#f8faff;border-radius:12px;border:1.5px solid #dbeafe;}
+.why-card .wi{font-size:36px;margin-bottom:10px;}
+.why-card h3{font-size:14px;font-weight:700;margin-bottom:6px;color:#0f172a;}
+.why-card p{font-size:12px;color:#64748b;line-height:1.7;}
+
+/* FOOTER */
+footer{background:#0f172a;color:#64748b;padding:52px 20px 24px;margin-top:56px;}
+.ftr{max-width:1200px;margin:0 auto;}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.fcol .fl{font-size:22px;font-weight:800;color:#fff;margin-bottom:4px;}
+.fcol .fl span{color:#3b82f6;}
+.fcol .ftag{font-size:11px;color:#3b82f6;font-weight:600;letter-spacing:0.5px;margin-bottom:12px;display:block;}
+.fcol p{font-size:13px;color:#475569;line-height:1.8;margin-bottom:16px;}
+.fcol .fmeta{font-size:12px;color:#334155;}
+.fcol h4{font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.8px;}
+.fcol a{display:block;font-size:13px;color:#475569;margin-bottom:8px;transition:color .15s;}
+.fcol a:hover{color:#e2e8f0;}
+.fdivider{border:none;border-top:1px solid #1e293b;margin:0 0 24px;}
+.fbot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center;}
+.fbot-left{font-size:12px;color:#334155;line-height:1.8;}
+.fbot-right{display:flex;gap:20px;}
+.fbot-right a{font-size:12px;color:#475569;transition:color .15s;}
+.fbot-right a:hover{color:#fff;}
+
+/* HIDDEN */
+.hidden{display:none!important;}
+
+/* RESPONSIVE */
+@media(max-width:900px){.fgrid{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){nav{display:none;}.cgrid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));}.fgrid{grid-template-columns:1fr;}.stats-inner{gap:24px;}}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="hdr">
+    <div class="logo">Calc<span>Hub</span><small>a Sana product</small></div>
+    <nav>
+      <a href="#home-loans">Home Loans</a>
+      <a href="#personal-finance">Personal Finance</a>
+      <a href="#investment">Investment</a>
+      <a href="#tax">Tax & Income</a>
+    </nav>
+    <select class="curr-sel" id="globalCurr" onchange="setCurrency(this.value)">
+      <option value="USD">$ USD</option>
+      <option value="GBP">£ GBP</option>
+      <option value="EUR">€ EUR</option>
+      <option value="CAD">CA$ CAD</option>
+      <option value="AUD">A$ AUD</option>
+      <option value="INR">₹ INR</option>
+      <option value="JPY">¥ JPY</option>
+      <option value="CHF">CHF</option>
+      <option value="SGD">S$ SGD</option>
+      <option value="AED">AED</option>
+    </select>
+  </div>
+</header>
+
+<!-- SEARCH -->
+<div class="search-wrap">
+  <div class="search-inner">
+    <input type="text" id="srch" placeholder="Search calculators — mortgage, EMI, compound interest…" oninput="doSearch(this.value)">
+    <div class="curr-badge">Currency: <strong id="curr-display">$ USD</strong></div>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Free Financial <em>Calculators</em></h1>
+  <p>Mortgage, loan, investment, tax, retirement & more.<br>Works in any currency — instant, accurate, always free.</p>
+</div>
+
+<!-- STATS -->
+<div class="stats-row">
+  <div class="stats-inner">
+    <div class="stat"><div class="sn">20+</div><div class="sl">Calculators</div></div>
+    <div class="stat"><div class="sn">10</div><div class="sl">Currencies</div></div>
+    <div class="stat"><div class="sn">100%</div><div class="sl">Free</div></div>
+    <div class="stat"><div class="sn">Instant</div><div class="sl">Results</div></div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+  <!-- HOME LOAN CALCULATORS -->
+  <section id="home-loans">
+    <div class="sec-hdr"><div class="sec-bar"></div><h2>🏠 Home Loan Calculators</h2></div>
+    <p class="sec-desc">Calculate mortgage payments, refinancing savings, affordability, and full amortization schedules. Essential tools for home buyers and homeowners worldwide.</p>
+    <div class="cgrid">
+      <a href="mortgage-calculator.html" class="ccard" data-cat="mortgage" data-name="Mortgage Calculator">
+        <span class="hot-tag">Most Popular</span>
+        <span class="ic">🏠</span>
+        <h3>Mortgage Calculator</h3>
+        <p>Monthly payment, total interest & real loan cost</p>
+      </a>
+      <a href="refinance-calculator.html" class="ccard" data-cat="mortgage" data-name="Refinance Calculator">
+        <span class="ic">🔄</span>
+        <h3>Refinance Calculator</h3>
+        <p>See monthly savings & break-even point</p>
+      </a>
+      <a href="amortization-calculator.html" class="ccard" data-cat="mortgage" data-name="Amortization Calculator">
+        <span class="ic">📊</span>
+        <h3>Amortization Calculator</h3>
+        <p>Full payment schedule — principal vs interest</p>
+      </a>
+      <a href="home-affordability-calculator.html" class="ccard" data-cat="mortgage" data-name="Home Affordability Calculator">
+        <span class="ic">🏡</span>
+        <h3>Home Affordability</h3>
+        <p>Max home price based on income & debt</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- PERSONAL FINANCE -->
+  <section id="personal-finance">
+    <div class="sec-hdr"><div class="sec-bar"></div><h2>💳 Loan & Debt Calculators</h2></div>
+    <p class="sec-desc">Calculate EMI for any loan, see how to pay off debt faster, understand credit card true cost, and compare different loan scenarios.</p>
+    <div class="cgrid">
+      <a href="loan-calculator.html" class="ccard" data-cat="loan" data-name="Loan EMI Calculator">
+        <span class="hot-tag">High Demand</span>
+        <span class="ic">💳</span>
+        <h3>Loan / EMI Calculator</h3>
+        <p>Monthly EMI, total interest, affordability check</p>
+      </a>
+      <a href="auto-loan-calculator.html" class="ccard" data-cat="loan" data-name="Auto Loan Calculator">
+        <span class="ic">🚗</span>
+        <h3>Auto Loan Calculator</h3>
+        <p>Car payment with tax, trade-in & down payment</p>
+      </a>
+      <a href="credit-card-interest-calculator.html" class="ccard" data-cat="loan" data-name="Credit Card Interest Calculator">
+        <span class="new-tag">New</span>
+        <span class="ic">💳</span>
+        <h3>Credit Card Interest</h3>
+        <p>True monthly & yearly credit card cost</p>
+      </a>
+      <a href="credit-card-payoff-calculator.html" class="ccard" data-cat="loan" data-name="Credit Card Payoff Calculator">
+        <span class="ic">✂️</span>
+        <h3>Credit Card Payoff</h3>
+        <p>Pay off card debt — minimum vs fixed payment</p>
+      </a>
+      <a href="debt-payoff-calculator.html" class="ccard" data-cat="loan" data-name="Debt Payoff Calculator">
+        <span class="ic">💰</span>
+        <h3>Debt Payoff Calculator</h3>
+        <p>Fastest path to becoming debt-free</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- INVESTMENT & SAVINGS -->
+  <section id="investment">
+    <div class="sec-hdr"><div class="sec-bar"></div><h2>📈 Investment & Savings Calculators</h2></div>
+    <p class="sec-desc">Plan your financial future with compound interest, investment growth projections, retirement planning, and inflation adjustment calculators.</p>
+    <div class="cgrid">
+      <a href="compound-interest-calculator.html" class="ccard" data-cat="investment" data-name="Compound Interest Calculator">
+        <span class="hot-tag">Most Used</span>
+        <span class="ic">🔢</span>
+        <h3>Compound Interest</h3>
+        <p>Watch money grow exponentially over time</p>
+      </a>
+      <a href="investment-calculator.html" class="ccard" data-cat="investment" data-name="Investment ROI Calculator">
+        <span class="ic">📈</span>
+        <h3>Investment / ROI Calculator</h3>
+        <p>ROI, CAGR & portfolio growth projections</p>
+      </a>
+      <a href="retirement-calculator.html" class="ccard" data-cat="investment" data-name="Retirement Calculator">
+        <span class="ic">🏖️</span>
+        <h3>Retirement Calculator</h3>
+        <p>Are you on track? Savings & income check</p>
+      </a>
+      <a href="inflation-calculator.html" class="ccard" data-cat="investment" data-name="Inflation Calculator">
+        <span class="ic">💹</span>
+        <h3>Inflation Calculator</h3>
+        <p>Real value of money — purchasing power</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- TAX & INCOME -->
+  <section id="tax">
+    <div class="sec-hdr"><div class="sec-bar"></div><h2>🧾 Tax & Income Calculators</h2></div>
+    <p class="sec-desc">Understand your real take-home pay, estimate income tax for multiple countries, and plan your salary effectively.</p>
+    <div class="cgrid">
+      <a href="salary-after-tax-calculator.html" class="ccard" data-cat="tax" data-name="Salary After Tax Calculator">
+        <span class="hot-tag">Popular</span>
+        <span class="ic">💼</span>
+        <h3>Salary After Tax</h3>
+        <p>Real take-home pay — USA, UK, Canada, Australia</p>
+      </a>
+      <a href="income-tax-calculator.html" class="ccard" data-cat="tax" data-name="Income Tax Calculator">
+        <span class="ic">🧾</span>
+        <h3>Income Tax Calculator</h3>
+        <p>Federal tax estimate with 2025 brackets</p>
+      </a>
+      <a href="salary-calculator.html" class="ccard" data-cat="tax" data-name="Salary Calculator">
+        <span class="ic">📊</span>
+        <h3>Salary Converter</h3>
+        <p>Hourly ↔ daily ↔ weekly ↔ annual</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- WHY CALCHUB -->
+  <div class="why-section">
+    <h2>Why Millions Use CalcHub</h2>
+    <div class="why-grid">
+      <div class="why-card"><div class="wi">⚡</div><h3>Instant Results</h3><p>All calculations run in your browser. Zero loading time — results appear as you type.</p></div>
+      <div class="why-card"><div class="wi">🌍</div><h3>Any Currency</h3><p>Switch between USD, GBP, EUR, CAD, AUD, INR and 10+ currencies with one click.</p></div>
+      <div class="why-card"><div class="wi">🎯</div><h3>Proven Accurate</h3><p>Industry-standard formulas. Same calculations used by banks and financial advisors.</p></div>
+      <div class="why-card"><div class="wi">🔒</div><h3>100% Private</h3><p>Nothing leaves your device. No data stored, no sign-up, no tracking of your numbers.</p></div>
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ftr">
+    <div class="fgrid">
+      <!-- BRAND COL -->
+      <div class="fcol">
+        <div class="fl">Calc<span>Hub</span></div>
+        <span class="ftag">A Sana Product</span>
+        <p>Free financial calculators built for everyone — from first-time homebuyers to seasoned investors. Works in any currency, any country, completely free.</p>
+        <div class="fmeta">© 2026 CalcHub. A product of Sana.<br>Not financial advice. For informational purposes only.</div>
+      </div>
+      <!-- HOME LOANS -->
+      <div class="fcol">
+        <h4>Home Loans</h4>
+        <a href="mortgage-calculator.html">🏠 Mortgage Calculator</a>
+        <a href="refinance-calculator.html">🔄 Refinance Calculator</a>
+        <a href="amortization-calculator.html">📊 Amortization</a>
+        <a href="home-affordability-calculator.html">🏡 Home Affordability</a>
+      </div>
+      <!-- DEBT & LOANS -->
+      <div class="fcol">
+        <h4>Loans & Debt</h4>
+        <a href="loan-calculator.html">💳 Loan / EMI Calculator</a>
+        <a href="auto-loan-calculator.html">🚗 Auto Loan</a>
+        <a href="credit-card-interest-calculator.html">💳 Credit Card Interest</a>
+        <a href="credit-card-payoff-calculator.html">✂️ Credit Card Payoff</a>
+        <a href="debt-payoff-calculator.html">💰 Debt Payoff</a>
+      </div>
+      <!-- INVESTMENT & TAX -->
+      <div class="fcol">
+        <h4>Investment & Tax</h4>
+        <a href="compound-interest-calculator.html">🔢 Compound Interest</a>
+        <a href="investment-calculator.html">📈 Investment / ROI</a>
+        <a href="retirement-calculator.html">🏖️ Retirement</a>
+        <a href="inflation-calculator.html">💹 Inflation</a>
+        <a href="salary-after-tax-calculator.html">💼 Salary After Tax</a>
+        <a href="income-tax-calculator.html">🧾 Income Tax</a>
+      </div>
+    </div>
+    <hr class="fdivider">
+    <div class="fbot">
+      <div class="fbot-left">
+        © 2026 <strong style="color:#e2e8f0;">CalcHub</strong> — A product of <strong style="color:#3b82f6;">Sana</strong><br>
+        Sana is a technology company building useful digital products worldwide.
+      </div>
+      <div class="fbot-right">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="mailto:hello@sana.com">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ======= CURRENCY =======
+var CURRENCIES = {
+  USD: {symbol:'$', name:'US Dollar'},
+  GBP: {symbol:'£', name:'British Pound'},
+  EUR: {symbol:'€', name:'Euro'},
+  CAD: {symbol:'CA$', name:'Canadian Dollar'},
+  AUD: {symbol:'A$', name:'Australian Dollar'},
+  INR: {symbol:'₹', name:'Indian Rupee'},
+  JPY: {symbol:'¥', name:'Japanese Yen'},
+  CHF: {symbol:'CHF ', name:'Swiss Franc'},
+  SGD: {symbol:'S$', name:'Singapore Dollar'},
+  AED: {symbol:'AED ', name:'UAE Dirham'}
+};
+
+var currentCurrency = 'USD';
+
+function setCurrency(code) {
+  currentCurrency = code;
+  var c = CURRENCIES[code] || CURRENCIES.USD;
+  document.getElementById('curr-display').textContent = c.symbol + ' ' + code;
+  localStorage.setItem('calchub_currency', code);
+  // Store for calculator pages to read
+  localStorage.setItem('calchub_currency_symbol', c.symbol);
+}
+
+// Init currency from saved preference
+(function(){
+  var saved = localStorage.getItem('calchub_currency') || 'USD';
+  document.getElementById('globalCurr').value = saved;
+  setCurrency(saved);
+})();
+
+// ======= SEARCH =======
+function doSearch(q) {
+  q = q.toLowerCase().trim();
+  var sections = document.querySelectorAll('section');
+
+  if (!q) {
+    document.querySelectorAll('.ccard').forEach(function(c){ c.classList.remove('hidden'); });
+    sections.forEach(function(s){ s.classList.remove('hidden'); });
+    return;
+  }
+
+  document.querySelectorAll('.ccard').forEach(function(c) {
+    var name = (c.getAttribute('data-name') || '').toLowerCase();
+    var text = c.textContent.toLowerCase();
+    c.classList.toggle('hidden', !name.includes(q) && !text.includes(q));
+  });
+
+  sections.forEach(function(s) {
+    var visible = [...s.querySelectorAll('.ccard')].some(function(c){ return !c.classList.contains('hidden'); });
+    s.classList.toggle('hidden', !visible);
+  });
+}
+</script>
+</body>
+</html>

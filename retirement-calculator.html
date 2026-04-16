@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retirement Calculator 2026 – Free Calculator | CalcHub</title>
+<meta name="description" content="Free retirement calculator 2026. Find out if you're on track for retirement. Calculate savings needed, monthly income, and 4% withdrawal rule. USA, UK, Canada & Australia.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="CalcHub a Sana product">
+<link rel="canonical" href="https://calchub-online-gamma.vercel.app/retirement-calculator.html">
+<meta property="og:title" content="Retirement Calculator 2026 | CalcHub">
+<meta property="og:description" content="Free retirement calculator 2026. Find out if you're on track for retirement. Calculate savings needed, monthly income, and 4% withdrawal rule. USA, UK, Canada & Australia.">
+<meta property="og:url" content="https://calchub-online-gamma.vercel.app/retirement-calculator.html">
+<meta name="google-site-verification" content="JEx3Q5bruk645FmL-3jORhNenlTzoXB96EmVAMGEuHA">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DSB7Z1TD41"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DSB7Z1TD41');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Retirement Calculator","url":"https://calchub-online-gamma.vercel.app/retirement-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:#f8f9fa;color:#1a1a1a;font-size:15px;line-height:1.7;}
+a{text-decoration:none;color:inherit;}
+header{background:#0f172a;padding:0 20px;position:sticky;top:0;z-index:999;box-shadow:0 2px 20px rgba(0,0,0,.3);}
+.hdr{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.logo{font-size:20px;font-weight:800;color:#fff;letter-spacing:-0.5px;}
+.logo span{color:#3b82f6;}
+.logo small{font-size:10px;color:#64748b;display:block;font-weight:400;}
+nav a{font-size:13px;color:#94a3b8;padding:6px 12px;border-radius:6px;font-weight:500;transition:all .15s;margin-left:2px;}
+nav a:hover{background:#1e293b;color:#fff;}
+.bc{background:#fff;border-bottom:1px solid #e2e8f0;padding:10px 20px;font-size:13px;}
+.bci{max-width:1200px;margin:0 auto;color:#64748b;}
+.bc a{color:#3b82f6;}
+.bc span{margin:0 6px;color:#cbd5e1;}
+.hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 60%,#0f172a 100%);padding:48px 20px 56px;color:#fff;}
+.hero-inner{max-width:1200px;margin:0 auto;}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:#1e3a5f;border:1px solid #3b82f6;border-radius:20px;padding:5px 14px;font-size:12px;color:#93c5fd;margin-bottom:16px;}
+.hero h1{font-size:clamp(22px,4vw,40px);font-weight:800;line-height:1.2;margin-bottom:10px;letter-spacing:-1px;}
+.hero h1 .hl{color:#3b82f6;}
+.hook{background:linear-gradient(90deg,#dc2626,#b91c1c);border-radius:8px;padding:14px 18px;margin:16px 0 0;display:flex;align-items:center;gap:12px;}
+.hook p{font-size:14px;font-weight:600;color:#fff;line-height:1.5;}
+.hook p span{font-size:18px;color:#fef08a;}
+.wrap{max-width:1200px;margin:0 auto;padding:28px 20px;display:grid;grid-template-columns:1fr 340px;gap:28px;}
+.calc-wrap{background:#fff;border-radius:14px;box-shadow:0 2px 20px rgba(0,0,0,.06);overflow:hidden;}
+.calc-header{background:#0f172a;padding:18px 22px;display:flex;align-items:center;gap:10px;}
+.calc-header h2{font-size:16px;font-weight:700;color:#fff;margin:0;}
+.calc-header .badge{background:#3b82f6;color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:10px;}
+.calc-body{padding:22px;}
+.stabs{display:flex;gap:6px;margin-bottom:20px;background:#f1f5f9;border-radius:8px;padding:4px;}
+.stab{flex:1;padding:8px;border:none;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;background:transparent;color:#64748b;transition:all .15s;}
+.stab.active{background:#fff;color:#0f172a;box-shadow:0 1px 4px rgba(0,0,0,.1);}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:14px;}
+.fg label{font-size:12px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:0.4px;}
+.fg input,.fg select{padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:8px;font-size:14px;font-family:inherit;background:#f9fafb;color:#1a1a1a;width:100%;transition:border-color .15s;}
+.fg input:focus,.fg select:focus{outline:none;border-color:#3b82f6;background:#fff;box-shadow:0 0 0 3px rgba(59,130,246,.1);}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.cbtn{width:100%;padding:15px;background:linear-gradient(135deg,#3b82f6,#2563eb);color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:6px;touch-action:manipulation;transition:all .15s;}
+.cbtn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(37,99,235,.35);}
+.res-wrap{display:none;margin-top:18px;}
+.res-wrap.show{display:block;}
+.res-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px;}
+.res-card{background:#f8faff;border:1.5px solid #dbeafe;border-radius:10px;padding:14px;text-align:center;}
+.res-card.primary{background:linear-gradient(135deg,#eff6ff,#dbeafe);border-color:#93c5fd;}
+.res-label{font-size:10px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;}
+.res-value{font-size:22px;font-weight:800;color:#2563eb;font-family:monospace;line-height:1;}
+.res-value.green{color:#16a34a;}
+.res-value.red{color:#dc2626;}
+.insight-box{background:linear-gradient(135deg,#fef2f2,#fee2e2);border:1.5px solid #fecaca;border-radius:10px;padding:16px;margin:14px 0;}
+.insight-box .ib-title{font-size:13px;font-weight:700;color:#991b1b;margin-bottom:6px;display:flex;align-items:center;gap:6px;}
+.insight-box p{font-size:13px;color:#7f1d1d;line-height:1.7;}
+.insight-box .big{font-size:20px;font-weight:800;color:#dc2626;}
+.warn-box{background:#fffbeb;border:1.5px solid #fcd34d;border-radius:10px;padding:14px;margin:10px 0;font-size:13px;color:#92400e;}
+.compare-wrap{background:#fff;border:1.5px solid #e2e8f0;border-radius:12px;padding:18px;margin-top:14px;}
+.compare-title{font-size:14px;font-weight:700;color:#1a1a1a;margin-bottom:14px;}
+.compare-table{width:100%;border-collapse:collapse;font-size:13px;}
+.compare-table th{background:#0f172a;color:#fff;padding:8px 12px;text-align:left;font-size:12px;}
+.compare-table td{padding:8px 12px;border-bottom:1px solid #f1f5f9;}
+.compare-table tr.best td{background:#f0fdf4;font-weight:700;color:#16a34a;}
+.prog-wrap{margin:14px 0;}
+.prog-label{display:flex;justify-content:space-between;font-size:12px;font-weight:600;margin-bottom:5px;}
+.prog-bar{height:10px;background:#e2e8f0;border-radius:10px;overflow:hidden;}
+.prog-fill{height:100%;border-radius:10px;transition:width .8s ease;}
+.prog-fill.blue{background:linear-gradient(90deg,#3b82f6,#2563eb);}
+.content-section{background:#fff;border-radius:14px;padding:28px;margin-top:24px;box-shadow:0 2px 12px rgba(0,0,0,.04);}
+.content-section h2{font-size:20px;font-weight:800;margin-bottom:14px;color:#0f172a;padding-bottom:10px;border-bottom:2px solid #e2e8f0;}
+.content-section h3{font-size:16px;font-weight:700;margin:20px 0 8px;color:#1e293b;}
+.content-section p{font-size:14px;color:#475569;line-height:1.9;margin-bottom:12px;}
+.content-section ul,.content-section ol{padding-left:20px;margin-bottom:12px;}
+.content-section li{font-size:14px;color:#475569;line-height:1.9;margin-bottom:4px;}
+.did-you-know{background:linear-gradient(135deg,#f0f9ff,#e0f2fe);border-left:4px solid #3b82f6;border-radius:0 10px 10px 0;padding:16px 18px;margin:18px 0;}
+.did-you-know .dyk-title{font-size:12px;font-weight:800;color:#0369a1;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;}
+.did-you-know p{font-size:14px;color:#0c4a6e;margin:0;font-weight:500;}
+.money-tip{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-left:4px solid #16a34a;border-radius:0 10px 10px 0;padding:16px 18px;margin:18px 0;}
+.money-tip .mt-title{font-size:12px;font-weight:800;color:#166534;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;}
+.money-tip p{font-size:14px;color:#14532d;margin:0;font-weight:500;}
+.example-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0;}
+.example-card{background:#f8faff;border:1.5px solid #dbeafe;border-radius:10px;padding:16px;}
+.example-card .flag{font-size:24px;margin-bottom:6px;}
+.example-card h4{font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px;}
+.example-card p{font-size:13px;color:#475569;line-height:1.7;margin:0;}
+.example-card .ex-num{font-size:20px;font-weight:800;color:#2563eb;margin:6px 0;}
+.ps-card{background:#fff;border:1.5px solid #e2e8f0;border-radius:10px;padding:18px;margin-bottom:12px;}
+.ps-problem{font-size:13px;font-weight:700;color:#dc2626;margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.ps-solution{font-size:13px;color:#475569;line-height:1.8;}
+.ps-solution .sol-tag{display:inline-block;background:#dcfce7;color:#166534;font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;margin-right:4px;}
+.faq-item{border-bottom:1px solid #f1f5f9;}
+.faq-item:last-child{border:none;}
+.faq-q{font-size:14px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:16px 0;color:#1e293b;touch-action:manipulation;}
+.faq-q:hover{color:#2563eb;}
+.faq-arrow{font-size:12px;color:#94a3b8;transition:transform .2s;flex-shrink:0;}
+.faq-item.open .faq-arrow{transform:rotate(180deg);}
+.faq-a{font-size:13px;color:#64748b;line-height:1.9;padding-bottom:14px;display:none;}
+.faq-item.open .faq-a{display:block;}
+.paa-item{background:#f8faff;border:1.5px solid #dbeafe;border-radius:10px;padding:14px 16px;margin-bottom:8px;cursor:pointer;}
+.paa-q{font-size:14px;font-weight:600;color:#1e293b;display:flex;justify-content:space-between;align-items:center;}
+.paa-a{font-size:13px;color:#64748b;line-height:1.8;margin-top:8px;display:none;padding-top:8px;border-top:1px solid #e2e8f0;}
+.paa-item.open .paa-a{display:block;}
+.sidebar{display:flex;flex-direction:column;gap:18px;}
+.side-card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 2px 12px rgba(0,0,0,.04);}
+.side-card h3{font-size:13px;font-weight:700;margin-bottom:12px;padding-bottom:8px;border-bottom:1.5px solid #f1f5f9;color:#0f172a;text-transform:uppercase;letter-spacing:0.4px;}
+.side-links{list-style:none;}
+.side-links li{margin-bottom:6px;}
+.side-links li a{font-size:13px;color:#3b82f6;display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:7px;border:1px solid #e2e8f0;transition:all .15s;}
+.side-links li a:hover{background:#eff6ff;border-color:#93c5fd;}
+.adbox{background:#f8faff;border:1.5px dashed #cbd5e1;border-radius:10px;padding:14px;text-align:center;color:#94a3b8;font-size:12px;min-height:90px;display:flex;align-items:center;justify-content:center;}
+.qstats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+.qstat{background:#f1f5f9;border-radius:8px;padding:12px;text-align:center;}
+.qstat .qn{font-size:18px;font-weight:800;color:#2563eb;}
+.qstat .ql{font-size:11px;color:#64748b;margin-top:2px;}
+.try-next{background:linear-gradient(135deg,#0f172a,#1e3a5f);border-radius:12px;padding:20px;color:#fff;margin-top:14px;}
+.try-next h3{font-size:14px;font-weight:700;margin-bottom:12px;color:#93c5fd;}
+.try-links{display:flex;flex-direction:column;gap:8px;}
+.try-link{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:10px 12px;font-size:13px;color:#e2e8f0;transition:all .15s;}
+.try-link:hover{background:rgba(255,255,255,.12);color:#fff;}
+footer{background:#0f172a;color:#64748b;padding:44px 20px 20px;margin-top:56px;}
+.ftr{max-width:1200px;margin:0 auto;}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:28px;margin-bottom:32px;}
+.fcol .fl{font-size:18px;font-weight:800;color:#fff;margin-bottom:2px;}
+.fcol .fl span{color:#3b82f6;}
+.fcol .fs{font-size:11px;color:#475569;margin-bottom:10px;}
+.fcol h4{font-size:11px;font-weight:700;color:#475569;margin-bottom:10px;text-transform:uppercase;letter-spacing:0.5px;}
+.fcol a{display:block;font-size:12px;color:#64748b;margin-bottom:6px;transition:color .15s;}
+.fcol a:hover{color:#fff;}
+.fbot{border-top:1px solid #1e293b;padding-top:18px;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.fbot a{color:#3b82f6;}
+.hidden{display:none!important;}
+@media(max-width:900px){.wrap{grid-template-columns:1fr;}.sidebar{order:-1;}}
+@media(max-width:600px){.fr{grid-template-columns:1fr;}.res-grid{grid-template-columns:1fr;}.example-grid{grid-template-columns:1fr;}nav{display:none;}}
+
+.curr-sel{background:#1e293b;border:1px solid #334155;color:#e2e8f0;font-size:12px;padding:6px 10px;border-radius:8px;cursor:pointer;font-family:inherit;font-weight:600;}
+.curr-sel:focus{outline:none;border-color:#3b82f6;}
+</style>
+</head>
+<body>
+<header><div class="hdr"><a href="index.html" class="logo">Calc<span>Hub</span><small>a Sana product</small></a><nav><a href="index.html#finance">Finance</a><a href="index.html#health">Health</a><a href="index.html#math">Math</a><a href="index.html#other">Other</a></nav></div></header>
+<div class="bc"><div class="bci"><a href="index.html">Home</a><span>›</span><a href="index.html#finance">Financial Calculators</a><span>›</span><span>Retirement Calculator</span></div></div>
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">🌍  &nbsp;|&nbsp; ⚡ Instant Results &nbsp;|&nbsp; 100% Free</div>
+    <h1>🏖️ Retirement Calculator 2026 –<br><span class='hl'>Find Out If You'll Have Enough to Retire</span></h1>
+    <div class="hook"><p>Most people reaching retirement age have less than <span>$100,000 saved</span>. The recommended amount is 25x your annual expenses. See if you're on track — and what to do if you're not.</p></div>
+  </div>
+</div>
+<div class="wrap">
+  <div>
+    
+    <div class="calc-wrap">
+      <div class="calc-header"><span style="font-size:20px;">🏖️</span><h2>Retirement Calculator</h2><span class="badge">FREE</span></div>
+      <div class="calc-body"><div class="fr"><div class="fg"><label>Current Age</label><input type="number" id="rage" value="35"></div><div class="fg"><label>Target Retirement Age</label><input type="number" id="rretire" value="65"></div></div>
+<div class="fr"><div class="fg"><label>Current Retirement Savings ($)</label><input type="number" id="rsavings" value="25000"></div><div class="fg"><label>Monthly Contribution ($)</label><input type="number" id="rcontrib" value="500"></div></div>
+<div class="fr"><div class="fg"><label>Annual Return Rate (%)</label><input type="number" id="rrate" value="7" step="0.1"></div><div class="fg"><label>Annual Expenses in Retirement ($)</label><input type="number" id="rexpenses" value="50000"></div></div>
+<div class="fg"><label>Life Expectancy (age)</label><input type="number" id="rlife" value="85"></div>
+<button class="cbtn" onclick="calcRetirement()">🏖️ Calculate My Retirement</button>
+<div class="res-wrap" id="retRes"></div></div>
+    </div>
+    <div class="content-section"><h2>How Much Do You Really Need to Retire?</h2>
+<p>The most widely used rule: save <strong>25 times your annual expenses</strong>. At a 4% withdrawal rate, your savings should theoretically last 30+ years. If you spend $50,000/year, you need $1,250,000 saved.</p>
+<h3>The 4% Withdrawal Rule Explained</h3>
+<p>Research (the "Trinity Study") shows that withdrawing 4% of your portfolio annually has historically lasted 30+ years in most market conditions. Withdraw $50,000/year → need $1,250,000. But some experts now suggest 3-3.5% for longer retirements or early retirees.</p>
+<div class="example-grid">
+<div class="example-card"><div class="flag">🇺🇸</div><h4>USA Retirement (401k + Social Security)</h4><div class="ex-num">$1.2M+ ideal</div><p>Social Security adds ~$1,500-2,500/month. Max 401k contribution: $23,000/year (2026).</p></div>
+<div class="example-card"><div class="flag">🇬🇧</div><h4>UK Retirement (Pension + State Pension)</h4><div class="ex-num">£600K+ ideal</div><p>State Pension: ~£11,500/year. Workplace pension auto-enrollment minimum 8%.</p></div>
+<div class="example-card"><div class="flag">🇨🇦</div><h4>Canada (RRSP + CPP)</h4><div class="ex-num">CA$1M+ ideal</div><p>CPP max: ~$1,300/month. OAS: ~$700/month. RRSP room: 18% of income annually.</p></div>
+<div class="example-card"><div class="flag">🇦🇺</div><h4>Australia (Super + Age Pension)</h4><div class="ex-num">A$1M+ ideal</div><p>Employer super: 11% of salary. Age Pension available for lower-balance retirees.</p></div>
+</div>
+<div class="did-you-know"><div class="dyk-title">💡 Retirement Reality Check</div><p>Average American retires with less than $300,000 saved — far below the $1M+ recommended. But starting at 25 with $300/month at 7% return reaches $1 million by age 65. The math works — but you must start.</p></div>
+<div class="money-tip"><div class="mt-title">💰 Retirement Saving Priority Order</div><p>1. Employer 401k match (free money!) 2. Pay high-interest debt 3. Max HSA (triple tax advantage) 4. Max Roth IRA 5. Max 401k 6. Taxable brokerage account</p></div></div>
+    <div class="content-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How much do I need to retire at 60? <span class="faq-arrow">▼</span></div><div class="faq-a">At 60 with 25 years of retirement and $50,000/year expenses: need $1.25M. Social Security at 60 isn't available (USA minimum 62). Factor in healthcare costs — major expense before Medicare at 65.</div></div><div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I retire at 55 with $1 million? <span class="faq-arrow">▼</span></div><div class="faq-a">Depends on expenses. At 4% withdrawal: $40,000/year. If expenses are under $40,000 and you have Social Security/pension later, possibly. Consider sequence-of-returns risk with early retirement.</div></div><div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is the best retirement account? <span class="faq-arrow">▼</span></div><div class="faq-a">USA: 401k with employer match first, then Roth IRA (tax-free growth), then traditional IRA. UK: Workplace pension first, then SIPP. Canada: Employer pension first, then RRSP, then TFSA. Australia: Super always.</div></div><div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How does inflation affect retirement savings? <span class="faq-arrow">▼</span></div><div class="faq-a">At 3% inflation, $50,000 expenses today = $80,000 in 20 years. Your savings must grow faster than inflation. Use 4-5% real return (after inflation) for retirement projections rather than nominal rate.</div></div><div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Should I delay retirement to increase Social Security? <span class="faq-arrow">▼</span></div><div class="faq-a">Each year you delay Social Security (USA) past 62 increases benefit by 6-8%/year, up to 70. Delaying from 62 to 70 can increase monthly benefit by 70%+. Major financial decision — calculate break-even age.</div></div>
+    </div>
+    <div class="content-section">
+      <h2>People Also Ask</h2>
+      <div class="paa-item" onclick="this.classList.toggle('open')"><div class="paa-q">What is the average retirement savings by age? <span>▼</span></div><div class="paa-a">USA averages: Age 35: $37,000. Age 45: $87,000. Age 55: $185,000. Age 65: $232,000. These averages are dragged up by high earners — medians are much lower. Don't compare; focus on your own 25x goal.</div></div><div class="paa-item" onclick="this.classList.toggle('open')"><div class="paa-q">How much Social Security will I get? <span>▼</span></div><div class="paa-a">Depends on earning history. Maximum 2026 benefit at full retirement age: ~$3,900/month. Average: ~$1,900/month. Check ssa.gov for your personalized estimate.</div></div>
+    </div>
+    <div class="content-section">
+      <h2>Related Calculators</h2>
+      <ul class="side-links"><li><a href="investment-calculator.html">📈 Investment Calculator</a></li>
+<li><a href="compound-interest-calculator.html">🔢 Compound Interest</a></li>
+<li><a href="inflation-calculator.html">💹 Inflation</a></li>
+<li><a href="income-tax-calculator.html">🧾 Income Tax</a></li></ul>
+    </div>
+    
+  </div>
+  <aside class="sidebar">
+    
+    <div class="side-card"><h3>Finance Tools</h3><ul class="side-links">
+      <li><a href="mortgage-calculator.html">🏠 Mortgage</a></li>
+      <li><a href="loan-calculator.html">💳 Loan/EMI</a></li>
+      <li><a href="compound-interest-calculator.html">🔢 Compound Interest</a></li>
+      <li><a href="retirement-calculator.html">🏖️ Retirement</a></li>
+      <li><a href="investment-calculator.html">📈 Investment</a></li>
+      <li><a href="income-tax-calculator.html">🧾 Income Tax</a></li>
+      <li><a href="debt-payoff-calculator.html">💰 Debt Payoff</a></li>
+      <li><a href="credit-card-payoff-calculator.html">💳 Credit Card</a></li>
+    </ul></div>
+    
+  </aside>
+</div>
+<footer>
+  <div class="ftr">
+    <div class="fgrid">
+      <div class="fcol">
+        <div class="fl">Calc<span>Hub</span></div>
+        <div class="fs">a Sana product</div>
+        <p style="font-size:12px;color:#475569;line-height:1.8;">Free financial calculators for everyone. Sana is a technology company building useful digital products worldwide.</p>
+      </div>
+      <div class="fcol">
+        <h4>Home Loans</h4>
+        <a href="mortgage-calculator.html">🏠 Mortgage</a>
+        <a href="refinance-calculator.html">🔄 Refinance</a>
+        <a href="amortization-calculator.html">📊 Amortization</a>
+        <a href="home-affordability-calculator.html">🏡 Home Affordability</a>
+      </div>
+      <div class="fcol">
+        <h4>Loans & Debt</h4>
+        <a href="loan-calculator.html">💳 Loan / EMI</a>
+        <a href="auto-loan-calculator.html">🚗 Auto Loan</a>
+        <a href="credit-card-interest-calculator.html">💳 Card Interest</a>
+        <a href="credit-card-payoff-calculator.html">✂️ Card Payoff</a>
+        <a href="debt-payoff-calculator.html">💰 Debt Payoff</a>
+      </div>
+      <div class="fcol">
+        <h4>Investment & Tax</h4>
+        <a href="compound-interest-calculator.html">🔢 Compound Interest</a>
+        <a href="investment-calculator.html">📈 Investment ROI</a>
+        <a href="retirement-calculator.html">🏖️ Retirement</a>
+        <a href="inflation-calculator.html">💹 Inflation</a>
+        <a href="salary-after-tax-calculator.html">💼 Salary After Tax</a>
+        <a href="income-tax-calculator.html">🧾 Income Tax</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 <strong style="color:#e2e8f0;">CalcHub</strong> — A product of <strong style="color:#3b82f6;">Sana</strong>. For informational purposes only. Not financial advice.</span>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+<script>
+function fm(n,d){d=d===undefined?2:d;return '$'+Number(n).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});}
+function fn(n,d){d=d===undefined?2:d;return Number(n).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});}
+function showRes(id,html){var el=document.getElementById(id);if(el){el.innerHTML=html;el.className='res-wrap show';el.scrollIntoView({behavior:'smooth',block:'nearest'});}}
+function calcRetirement(){var age=+document.getElementById('rage').value;var ret=+document.getElementById('rretire').value;var sav=+document.getElementById('rsavings').value;var con=+document.getElementById('rcontrib').value;var r=+document.getElementById('rrate').value/100;var exp=+document.getElementById('rexpenses').value;var life=+document.getElementById('rlife').value;var yrs=ret-age;var mr=r/12;var n=yrs*12;var fv=sav*Math.pow(1+mr,n)+con*(Math.pow(1+mr,n)-1)/mr;var needed=exp*25;var ryrs=life-ret;var monthly=fv*(r/12)/(1-Math.pow(1+r/12,-ryrs*12));var surplus=fv-needed;var onTrack=fv>=needed;var addNeeded=onTrack?0:Math.max(0,(needed-fv)*mr/(Math.pow(1+mr,n)-1));
+showRes('retRes','<div class="res-grid"><div class="res-card primary"><div class="res-label">Savings at Age '+ret+'</div><div class="res-value">'+fm(fv,0)+'</div></div><div class="res-card"><div class="res-label">Needed (25x Rule)</div><div class="res-value '+(onTrack?'green':'red')+'">'+fm(needed,0)+'</div></div><div class="res-card"><div class="res-label">Monthly Income Available</div><div class="res-value '+(onTrack?'green':'red')+'">'+fm(monthly)+'</div></div></div>'+
+    '<div class="insight-box" style="background:linear-gradient(135deg,'+(onTrack?'#f0fdf4,#dcfce7);border-color:#bbf7d0;"><div class="ib-title" style="color:#166534;">✅ On Track!':'#fef2f2,#fee2e2);border-color:#fecaca;"><div class="ib-title" style="color:#991b1b;">⚠️ Gap Found')+'</div><p style="color:'+(onTrack?'#14532d':'#7f1d1d')+'">'+(onTrack?'You're on track! Surplus of <span class="big" style="color:#16a34a;">'+fm(surplus,0)+'</span> above your 25x goal.':'You're short by <span class="big">'+fm(Math.abs(surplus),0)+'</span>. To close the gap, contribute an additional <strong>'+fm(addNeeded)+'/month</strong>.')+'</p></div>'+
+    '<div class="warn-box">⚠️ This assumes '+document.getElementById('rrate').value+'% real return. Inflation not included. Social Security/pension income would reduce savings needed. Consult a financial advisor for personalized planning.</div>');}
+
+// ======= CURRENCY SUPPORT =======
+function getCurrSymbol() {
+  return localStorage.getItem('calchub_currency_symbol') || '$';
+}
+function fmC(n, d) {
+  d = d === undefined ? 2 : d;
+  var sym = getCurrSymbol();
+  return sym + Number(n).toLocaleString('en-US', {minimumFractionDigits: d, maximumFractionDigits: d});
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Loan Calculator – Free Online Calculator | CalcHub</title>
+<meta name="description" content="Free auto loan calculator. Calculate monthly car payment with down payment, trade-in value, and sales tax. Find your exact car loan cost.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="CalcHub a Sana product">
+<link rel="canonical" href="https://calchub-online-gamma.vercel.app/auto-loan-calculator.html">
+<meta property="og:title" content="Auto Loan Calculator | CalcHub">
+<meta property="og:description" content="Free auto loan calculator. Calculate monthly car payment with down payment, trade-in value, and sales tax. Find your exact car loan cost.">
+<meta property="og:url" content="https://calchub-online-gamma.vercel.app/auto-loan-calculator.html">
+<meta property="og:type" content="website">
+<meta name="google-site-verification" content="JEx3Q5bruk645FmL-3jORhNenlTzoXB96EmVAMGEuHA">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DSB7Z1TD41"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DSB7Z1TD41');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Auto Loan Calculator","url":"https://calchub-online-gamma.vercel.app/auto-loan-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:#f5f4f0;color:#1a1a18;font-size:15px;line-height:1.7;}
+a{text-decoration:none;color:inherit;}
+header{background:#1a1a18;padding:0 16px;position:sticky;top:0;z-index:999;border-bottom:2px solid #333;}
+.hdr{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:54px;}
+.logo{font-size:20px;font-weight:700;color:#fff;}
+.logo span{color:#60a5fa;}
+.logo small{font-size:10px;color:#9ca3af;display:block;font-weight:400;}
+nav a{font-size:13px;color:#d1d5db;padding:5px 10px;border-radius:6px;margin-left:2px;}
+nav a:hover{background:#374151;color:#fff;}
+.bc{background:#fff;border-bottom:1px solid #e5e7eb;padding:10px 16px;font-size:13px;color:#6b7280;}
+.bci{max-width:1100px;margin:0 auto;}
+.bc a{color:#2563eb;}
+.bc span{margin:0 6px;}
+.phdr{background:#1a1a18;color:#fff;padding:32px 16px 40px;}
+.phdr .pi{max-width:1100px;margin:0 auto;}
+.phdr h1{font-size:clamp(20px,4vw,34px);font-weight:700;margin-bottom:8px;}
+.phdr p{color:#9ca3af;font-size:14px;max-width:560px;}
+.pwrap{max-width:1100px;margin:0 auto;padding:24px 16px;display:grid;grid-template-columns:1fr 300px;gap:24px;}
+.adbox{background:#f9f8f6;border:1.5px dashed #d6d0c4;border-radius:8px;padding:14px;text-align:center;color:#9ca3af;font-size:12px;min-height:90px;display:flex;align-items:center;justify-content:center;margin:14px 0;}
+.cbox{background:#fff;border:1.5px solid #e5e7eb;border-radius:10px;padding:22px;margin-bottom:16px;}
+.cbox h2{font-size:17px;font-weight:700;margin-bottom:18px;padding-bottom:12px;border-bottom:1.5px solid #e5e7eb;}
+.fg{display:flex;flex-direction:column;gap:4px;margin-bottom:12px;}
+.fg label{font-size:13px;font-weight:600;color:#374151;}
+.fg input,.fg select{padding:10px 12px;border:1.5px solid #d1d5db;border-radius:6px;font-size:14px;font-family:inherit;background:#f9fafb;width:100%;}
+.fg input:focus,.fg select:focus{outline:none;border-color:#2563eb;background:#fff;}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.cbtn{width:100%;padding:13px;background:#2563eb;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;margin-top:6px;touch-action:manipulation;}
+.cbtn:hover{background:#1d4ed8;}
+.cbtn:active{background:#1e40af;}
+.res{margin-top:14px;padding:16px;background:#eff6ff;border:1.5px solid #bfdbfe;border-radius:8px;display:none;}
+.res.show{display:block;}
+.rl{font-size:11px;color:#6b7280;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;}
+.rv{font-size:30px;font-weight:700;color:#2563eb;font-family:monospace;}
+.rd{font-size:13px;color:#374151;margin-top:10px;line-height:2.2;}
+.faq-item{border-bottom:1px solid #f3f4f6;padding:12px 0;}
+.faq-item:last-child{border:none;}
+.faq-q{font-size:14px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;gap:8px;touch-action:manipulation;}
+.faq-a{font-size:13px;color:#6b7280;line-height:1.8;margin-top:8px;display:none;}
+.faq-item.open .faq-a{display:block;}
+.sbox{background:#fff;border:1.5px solid #e5e7eb;border-radius:10px;padding:18px;margin-bottom:16px;}
+.sbox h3{font-size:13px;font-weight:700;margin-bottom:12px;padding-bottom:8px;border-bottom:1.5px solid #f3f4f6;}
+.slinks{list-style:none;}
+.slinks li{margin-bottom:6px;}
+.slinks li a{font-size:13px;color:#2563eb;display:flex;align-items:center;gap:6px;padding:3px 0;}
+.slinks li a:hover{color:#1d4ed8;}
+.tip-box{background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:8px;padding:14px;margin:14px 0;font-size:13px;color:#166534;}
+footer{background:#1a1a18;color:#9ca3af;padding:36px 16px 18px;margin-top:48px;}
+.ftr{max-width:1100px;margin:0 auto;}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:24px;margin-bottom:24px;}
+.fcol .fl{font-size:17px;font-weight:700;color:#fff;margin-bottom:2px;}
+.fcol .fl span{color:#60a5fa;}
+.fcol .fs{font-size:10px;color:#6b7280;margin-bottom:8px;}
+.fcol h4{font-size:11px;font-weight:600;color:#6b7280;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.5px;}
+.fcol a{display:block;font-size:12px;color:#6b7280;margin-bottom:5px;}
+.fcol a:hover{color:#fff;}
+.fbot{border-top:1px solid #374151;padding-top:14px;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.fbot a{color:#60a5fa;}
+@media(max-width:768px){.pwrap{grid-template-columns:1fr;}.fr{grid-template-columns:1fr;}}
+
+.curr-sel{background:#1e293b;border:1px solid #334155;color:#e2e8f0;font-size:12px;padding:6px 10px;border-radius:8px;cursor:pointer;font-family:inherit;font-weight:600;}
+.curr-sel:focus{outline:none;border-color:#3b82f6;}
+</style>
+</head>
+<body>
+<header>
+  <div class="hdr">
+    <a href="index.html" class="logo">Calc<span>Hub</span><small>a Sana product</small></a>
+    <nav>
+      <a href="index.html#finance">Finance</a>
+      <a href="index.html#health">Health</a>
+      <a href="index.html#math">Math</a>
+      <a href="index.html#other">Other</a>
+    </nav>
+  </div>
+</header>
+<div class="bc"><div class="bci"><a href="index.html">Home</a><span>›</span><a href="index.html#finance">Finance</a><span>›</span><span>Auto Loan Calculator</span></div></div>
+<div class="phdr"><div class="pi"><h1>🚗 Auto Loan Calculator</h1><p>Calculate your exact monthly car payment including tax, down payment, and trade-in value.</p></div></div>
+<div class="pwrap">
+  <div>
+    
+    <div class="cbox">
+      <h2>Auto Loan Calculator</h2>
+      <div class="fr"><div class="fg"><label>Vehicle Price ($)</label><input type="number" id="avp" value="25000"></div><div class="fg"><label>Down Payment ($)</label><input type="number" id="adp" value="5000"></div></div>
+<div class="fr"><div class="fg"><label>Trade-in Value ($)</label><input type="number" id="atv" value="0"></div><div class="fg"><label>Sales Tax (%)</label><input type="number" id="atx" value="8" step="0.1"></div></div>
+<div class="fr"><div class="fg"><label>Interest Rate (% APR)</label><input type="number" id="air" value="6.5" step="0.01"></div><div class="fg"><label>Loan Term</label><select id="aterm"><option value="24">24 months</option><option value="36">36 months</option><option value="48">48 months</option><option value="60" selected>60 months</option><option value="72">72 months</option><option value="84">84 months</option></select></div></div>
+<button class="cbtn" onclick="calcAuto()">Calculate Payment</button>
+<div class="res" id="ares"></div>
+    </div>
+    <div class="cbox">
+      <h2>How to Use</h2>
+      <p>Enter vehicle price, down payment, trade-in value, sales tax rate, APR, and loan term. Click Calculate to see your exact monthly car payment.</p><div class='tip-box'>💡 <strong>Pro Tip:</strong> Compare dealer financing vs bank/credit union rates. Credit unions often offer lower APR!</div>
+    </div>
+    <div class="cbox">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is a good APR for a car loan? <span>▼</span></div><div class="faq-a">Excellent credit (750+): 4–6%. Good credit (700+): 6–9%. Fair credit: 9–14%. Always compare multiple lenders.</div></div><div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Should I choose longer loan term? <span>▼</span></div><div class="faq-a">Longer terms lower monthly payments but increase total interest. 72-84 month loans also risk being 'underwater' (owing more than car's value).</div></div><div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is 0% financing really free? <span>▼</span></div><div class="faq-a">0% APR is real but usually requires excellent credit and may mean giving up a cash discount. Always compare total cost both ways.</div></div>
+    </div>
+    
+  </div>
+  <aside>
+    
+    <div class="sbox">
+      <h3>Related Calculators</h3>
+      <ul class="slinks"><li><a href="mortgage-calculator.html">🏠 Mortgage</a></li>
+<li><a href="loan-calculator.html">💳 Loan/EMI</a></li>
+<li><a href="refinance-calculator.html">🔄 Refinance</a></li>
+<li><a href="amortization-calculator.html">📊 Amortization</a></li></ul>
+    </div>
+    <div class="sbox">
+      <h3>All Categories</h3>
+      <ul class="slinks">
+        <li><a href="index.html#finance">💰 Financial</a></li>
+        <li><a href="index.html#health">❤️ Health</a></li>
+        <li><a href="index.html#math">📐 Math</a></li>
+        <li><a href="index.html#other">🔧 Other</a></li>
+      </ul>
+    </div>
+    
+  </aside>
+</div>
+<footer>
+  <div class="ftr">
+    <div class="fgrid">
+      <div class="fcol">
+        <div class="fl">Calc<span>Hub</span></div>
+        <div class="fs">a Sana product</div>
+        <p style="font-size:12px;color:#475569;line-height:1.8;">Free financial calculators for everyone. Sana is a technology company building useful digital products worldwide.</p>
+      </div>
+      <div class="fcol">
+        <h4>Home Loans</h4>
+        <a href="mortgage-calculator.html">🏠 Mortgage</a>
+        <a href="refinance-calculator.html">🔄 Refinance</a>
+        <a href="amortization-calculator.html">📊 Amortization</a>
+        <a href="home-affordability-calculator.html">🏡 Home Affordability</a>
+      </div>
+      <div class="fcol">
+        <h4>Loans & Debt</h4>
+        <a href="loan-calculator.html">💳 Loan / EMI</a>
+        <a href="auto-loan-calculator.html">🚗 Auto Loan</a>
+        <a href="credit-card-interest-calculator.html">💳 Card Interest</a>
+        <a href="credit-card-payoff-calculator.html">✂️ Card Payoff</a>
+        <a href="debt-payoff-calculator.html">💰 Debt Payoff</a>
+      </div>
+      <div class="fcol">
+        <h4>Investment & Tax</h4>
+        <a href="compound-interest-calculator.html">🔢 Compound Interest</a>
+        <a href="investment-calculator.html">📈 Investment ROI</a>
+        <a href="retirement-calculator.html">🏖️ Retirement</a>
+        <a href="inflation-calculator.html">💹 Inflation</a>
+        <a href="salary-after-tax-calculator.html">💼 Salary After Tax</a>
+        <a href="income-tax-calculator.html">🧾 Income Tax</a>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 <strong style="color:#e2e8f0;">CalcHub</strong> — A product of <strong style="color:#3b82f6;">Sana</strong>. For informational purposes only. Not financial advice.</span>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+<script>
+function fm(n,d){d=d===undefined?2:d;return Number(n).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});}
+function showRes(id,html){var el=document.getElementById(id);if(el){el.innerHTML=html;el.className='res show';el.scrollIntoView({behavior:'smooth',block:'nearest'});}}
+function calcAuto(){var price=+document.getElementById('avp').value;var dp=+document.getElementById('adp').value;var tv=+document.getElementById('atv').value;var tax=+document.getElementById('atx').value/100;var r=+document.getElementById('air').value/100/12;var n=+document.getElementById('aterm').value;var taxAmt=price*tax;var P=price+taxAmt-dp-tv;if(P<=0){showRes('ares','<div class="rl">Result</div><div class="rv" style="color:#16a34a">$0/mo</div><div class="rd">✅ Down payment and trade-in cover full cost!</div>');return;}var M=r===0?P/n:P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);showRes('ares','<div class="rl">Monthly Payment</div><div class="rv">$'+fm(M)+'</div><div class="rd">🚗 Loan Amount: <strong>$'+fm(P)+'</strong><br>🧾 Tax: <strong>$'+fm(taxAmt)+'</strong><br>📈 Total Interest: <strong>$'+fm(M*n-P)+'</strong><br>💵 Total Cost: <strong>$'+fm(M*n+dp+tv)+'</strong></div>');}
+
+// ======= CURRENCY SUPPORT =======
+function getCurrSymbol() {
+  return localStorage.getItem('calchub_currency_symbol') || '$';
+}
+function fmC(n, d) {
+  d = d === undefined ? 2 : d;
+  var sym = getCurrSymbol();
+  return sym + Number(n).toLocaleString('en-US', {minimumFractionDigits: d, maximumFractionDigits: d});
+}
+</script>
+</body>
+</html>

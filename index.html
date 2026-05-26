@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CalcHub – Free Financial Calculators | Mortgage, Loan, Investment & More</title>
+<meta name="description" content="Free financial calculators for mortgage, loan EMI, compound interest, retirement, investment ROI and more. Works in any currency. Instant, accurate, no sign-up needed.">
+<meta name="keywords" content="mortgage calculator, loan calculator, EMI calculator, compound interest calculator, retirement calculator, investment calculator, refinance calculator, home loan calculator, debt payoff calculator, salary calculator">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="author" content="CalcHub by Sana">
+<link rel="canonical" href="https://calchub-online-gamma.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CalcHub – Free Financial Calculators">
+<meta property="og:description" content="Mortgage, loan, investment, retirement calculators. Works in any currency. Free, instant, accurate.">
+<meta property="og:url" content="https://calchub-online-gamma.vercel.app/">
+<meta property="og:site_name" content="CalcHub">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CalcHub – Free Financial Calculators">
+<meta name="google-site-verification" content="JEx3Q5bruk645FmL-3jORhNenlTzoXB96EmVAMGEuHA">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DSB7Z1TD41"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DSB7Z1TD41');</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"CalcHub","url":"https://calchub-online-gamma.vercel.app/","description":"Free financial calculators for mortgage, loan, investment, retirement and more","potentialAction":{"@type":"SearchAction","target":"https://calchub-online-gamma.vercel.app/?q={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:#f8f9fa;color:#1a1a1a;font-size:15px;line-height:1.6;}
+a{text-decoration:none;color:inherit;}
+header{background:#0f172a;padding:0 20px;position:sticky;top:0;z-index:999;box-shadow:0 2px 20px rgba(0,0,0,.3);}
+.hdr{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px;}
+.logo{font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.5px;line-height:1.2;}
+.logo span{color:#3b82f6;}
+.logo small{font-size:10px;color:#64748b;display:block;font-weight:400;letter-spacing:0.3px;}
+nav{display:flex;gap:2px;}
+nav a{font-size:13px;color:#94a3b8;padding:6px 10px;border-radius:6px;font-weight:500;transition:all .15s;white-space:nowrap;}
+nav a:hover{background:#1e293b;color:#fff;}
+.curr-sel{background:#1e293b;border:1px solid #334155;color:#e2e8f0;font-size:12px;padding:6px 10px;border-radius:8px;cursor:pointer;font-family:inherit;font-weight:600;}
+.curr-sel:focus{outline:none;border-color:#3b82f6;}
+.search-wrap{background:#1e293b;border-bottom:1px solid #334155;padding:10px 20px;}
+.search-inner{max-width:1200px;margin:0 auto;display:flex;gap:10px;align-items:center;}
+.search-box{flex:1;max-width:540px;padding:10px 16px;background:#0f172a;border:1.5px solid #334155;border-radius:8px;color:#e2e8f0;font-size:14px;font-family:inherit;}
+.search-box:focus{outline:none;border-color:#3b82f6;}
+.search-box::placeholder{color:#475569;}
+.curr-badge{display:flex;align-items:center;gap:6px;background:#0f172a;border:1px solid #334155;border-radius:8px;padding:6px 12px;font-size:12px;color:#94a3b8;white-space:nowrap;}
+.curr-badge strong{color:#3b82f6;}
+.hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 50%,#0f172a 100%);padding:56px 20px 64px;text-align:center;color:#fff;}
+.hero h1{font-size:clamp(26px,5vw,50px);font-weight:800;letter-spacing:-1.5px;margin-bottom:14px;line-height:1.1;}
+.hero h1 em{color:#3b82f6;font-style:normal;}
+.hero p{color:#94a3b8;font-size:16px;max-width:500px;margin:0 auto;line-height:1.7;}
+.stats-bar{background:#1e293b;border-top:1px solid #334155;border-bottom:1px solid #334155;padding:18px 20px;}
+.stats-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:52px;flex-wrap:wrap;}
+.stat{text-align:center;}
+.stat .sn{font-size:22px;font-weight:800;color:#3b82f6;}
+.stat .sl{font-size:11px;color:#64748b;margin-top:2px;text-transform:uppercase;letter-spacing:0.5px;}
+.main{max-width:1200px;margin:0 auto;padding:44px 20px;}
+.sec-hdr{display:flex;align-items:center;gap:14px;margin-bottom:6px;}
+.sec-bar{width:4px;height:32px;background:linear-gradient(180deg,#3b82f6,#2563eb);border-radius:4px;flex-shrink:0;}
+.sec-hdr h2{font-size:22px;font-weight:800;color:#0f172a;letter-spacing:-0.5px;}
+.sec-desc{font-size:14px;color:#64748b;margin-bottom:22px;padding-left:18px;border-left:2px solid #e2e8f0;line-height:1.8;max-width:700px;}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin-bottom:52px;}
+.ccard{background:#fff;border:1.5px solid #e2e8f0;border-radius:12px;padding:20px;display:block;transition:all .2s;position:relative;}
+.ccard:hover{border-color:#3b82f6;box-shadow:0 8px 24px rgba(59,130,246,.12);transform:translateY(-3px);}
+.ccard:active{transform:translateY(-1px);}
+.ccard .ic{font-size:28px;margin-bottom:12px;display:block;}
+.ccard h3{font-size:14px;font-weight:700;margin-bottom:5px;color:#0f172a;line-height:1.3;}
+.ccard p{font-size:12px;color:#64748b;line-height:1.6;}
+.hot-tag{position:absolute;top:10px;right:10px;font-size:9px;font-weight:800;background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;padding:3px 7px;border-radius:10px;text-transform:uppercase;}
+.new-tag{position:absolute;top:10px;right:10px;font-size:9px;font-weight:800;background:linear-gradient(135deg,#10b981,#059669);color:#fff;padding:3px 7px;border-radius:10px;text-transform:uppercase;}
+.high-tag{position:absolute;top:10px;right:10px;font-size:9px;font-weight:800;background:linear-gradient(135deg,#8b5cf6,#7c3aed);color:#fff;padding:3px 7px;border-radius:10px;text-transform:uppercase;}
+.why-sec{background:#fff;border:1.5px solid #e2e8f0;border-radius:16px;padding:40px;margin:48px 0;}
+.why-sec h2{font-size:22px;font-weight:800;margin-bottom:28px;text-align:center;color:#0f172a;letter-spacing:-0.5px;}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
+.why-card{text-align:center;padding:22px 16px;background:#f8faff;border-radius:12px;border:1.5px solid #dbeafe;}
+.why-card .wi{font-size:36px;margin-bottom:10px;}
+.why-card h3{font-size:14px;font-weight:700;margin-bottom:6px;color:#0f172a;}
+.why-card p{font-size:12px;color:#64748b;line-height:1.7;}
+footer{background:#0f172a;color:#64748b;padding:56px 20px 24px;}
+.ftr{max-width:1200px;margin:0 auto;}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.fcol .fl{font-size:22px;font-weight:800;color:#fff;margin-bottom:4px;letter-spacing:-0.5px;}
+.fcol .fl span{color:#3b82f6;}
+.fcol .ftag{font-size:11px;color:#3b82f6;font-weight:700;letter-spacing:0.8px;margin-bottom:14px;display:block;text-transform:uppercase;}
+.fcol .fdesc{font-size:13px;color:#475569;line-height:1.9;margin-bottom:18px;}
+.fcol .fmeta{font-size:12px;color:#334155;line-height:1.8;}
+.fcol h4{font-size:11px;font-weight:700;color:#64748b;margin-bottom:16px;text-transform:uppercase;letter-spacing:0.8px;}
+.fcol a{display:flex;align-items:center;gap:6px;font-size:13px;color:#475569;margin-bottom:9px;transition:color .15s;}
+.fcol a:hover{color:#e2e8f0;}
+hr.fdiv{border:none;border-top:1px solid #1e293b;margin:0 0 24px;}
+.fbot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center;}
+.fbot-left{font-size:12px;color:#334155;line-height:1.9;}
+.fbot-right{display:flex;gap:20px;}
+.fbot-right a{font-size:12px;color:#475569;transition:color .15s;}
+.fbot-right a:hover{color:#fff;}
+.hidden{display:none!important;}
+.sgap{margin-bottom:52px;}
+
+/* ===== AI SECTION ===== */
+.ai-section{background:linear-gradient(135deg,#0f172a,#1e3a5f);border-radius:16px;padding:40px;margin:0 0 52px;color:#fff;}
+.ai-section h2{font-size:22px;font-weight:800;margin-bottom:6px;letter-spacing:-0.5px;}
+.ai-section h2 span{color:#3b82f6;}
+.ai-desc{font-size:14px;color:#94a3b8;margin-bottom:24px;line-height:1.7;}
+.ai-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+.ai-chip{background:rgba(59,130,246,.15);border:1px solid rgba(59,130,246,.3);border-radius:20px;padding:6px 14px;font-size:12px;color:#93c5fd;cursor:pointer;transition:all .15s;font-family:inherit;}
+.ai-chip:hover{background:rgba(59,130,246,.3);color:#fff;}
+.ai-input-wrap{display:flex;gap:10px;}
+.ai-input{flex:1;padding:13px 16px;background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15);border-radius:10px;color:#fff;font-size:14px;font-family:inherit;}
+.ai-input:focus{outline:none;border-color:#3b82f6;background:rgba(255,255,255,.12);}
+.ai-input::placeholder{color:#475569;}
+.ai-btn{padding:13px 22px;background:#3b82f6;color:#fff;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;white-space:nowrap;touch-action:manipulation;transition:all .15s;}
+.ai-btn:hover{background:#2563eb;}
+.ai-btn:disabled{background:#334155;cursor:not-allowed;}
+.ai-response{margin-top:18px;padding:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;display:none;}
+.ai-response.show{display:block;}
+.ai-res-label{font-size:10px;font-weight:700;color:#3b82f6;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:8px;}
+.ai-res-text{font-size:14px;color:#e2e8f0;line-height:1.9;}
+.ai-thinking{display:flex;align-items:center;gap:8px;font-size:14px;color:#94a3b8;}
+.ai-dot{width:6px;height:6px;background:#3b82f6;border-radius:50%;animation:ai-pulse 1.2s infinite;}
+.ai-dot:nth-child(2){animation-delay:.2s;}
+.ai-dot:nth-child(3){animation-delay:.4s;}
+@keyframes ai-pulse{0%,80%,100%{transform:scale(0.8);opacity:0.5;}40%{transform:scale(1.2);opacity:1;}}
+.ai-disclaimer{font-size:11px;color:#334155;margin-top:12px;text-align:center;}
+@media(max-width:600px){.ai-input-wrap{flex-direction:column;}.ai-section{padding:24px;}}
+@media(max-width:900px){.fgrid{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){nav{display:none;}.cgrid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));}.fgrid{grid-template-columns:1fr;}.stats-inner{gap:24px;}.why-sec{padding:24px;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hdr">
+    <div class="logo">Calc<span>Hub</span><small>a Sana product</small></div>
+    <nav>
+      <a href="#home-loans">Home Loans</a>
+      <a href="#loans-debt">Loans & Debt</a>
+      <a href="#investment">Investment</a>
+      <a href="#tax-income">Tax & Income</a>
+    </nav>
+    <select class="curr-sel" id="globalCurr" onchange="setCurrency(this.value)">
+      <option value="USD">$ USD</option>
+      <option value="GBP">£ GBP</option>
+      <option value="EUR">€ EUR</option>
+      <option value="CAD">CA$ CAD</option>
+      <option value="AUD">A$ AUD</option>
+      <option value="INR">₹ INR</option>
+      <option value="JPY">¥ JPY</option>
+      <option value="CHF">CHF</option>
+      <option value="SGD">S$ SGD</option>
+      <option value="AED">AED</option>
+    </select>
+  </div>
+</header>
+
+<div class="search-wrap">
+  <div class="search-inner">
+    <input type="text" class="search-box" id="srch" placeholder="Search — mortgage, EMI, compound interest, retirement…" oninput="doSearch(this.value)">
+    <div class="curr-badge">Currency: <strong id="curr-display">$ USD</strong></div>
+  </div>
+</div>
+
+<div class="hero">
+  <h1>Free Financial <em>Calculators</em></h1>
+  <p>Mortgage, loan, investment, retirement & more.<br>Instant results in any currency — always free.</p>
+</div>
+
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat"><div class="sn">18+</div><div class="sl">Calculators</div></div>
+    <div class="stat"><div class="sn">10</div><div class="sl">Currencies</div></div>
+    <div class="stat"><div class="sn">100%</div><div class="sl">Free</div></div>
+    <div class="stat"><div class="sn">⚡</div><div class="sl">Instant</div></div>
+  </div>
+</div>
+
+<main class="main">
+
+  <section id="home-loans" class="sgap">
+    <div class="sec-hdr"><div class="sec-bar"></div><h2>🏠 Home Loan Calculators</h2></div>
+    <p class="sec-desc">Calculate mortgage payments, compare refinancing savings, check home affordability, and view full amortization schedules.</p>
+    <div class="cgrid">
+      <a href="mortgage-calculator.html" class="ccard" data-name="Mortgage Calculator"><span class="hot-tag">Most Popular</span><span class="ic">🏠</span><h3>Mortgage Calculator</h3><p>Monthly payment, total interest & real loan cost</p></a>
+      <a href="refinance-calculator.html" class="ccard" data-name="Refinance Calculator"><span class="ic">🔄</span><h3>Refinance Calculator</h3><p>Monthly savings & break-even point</p></a>
+      <a href="amortization-calculator.html" class="ccard" data-name="Amortization Calculator"><span class="ic">📊</span><h3>Amortization Calculator</h3><p>Full schedule — principal vs interest split</p></a>
+      <a href="home-affordability-calculator.html" class="ccard" data-name="Home Affordability Calculator"><span class="ic">🏡</span><h3>Home Affordability</h3><p>Max home price based on income & debt</p></a>
+    </div>
+  </section>
+
+  <section id="loans-debt" class="sgap">
+    <div class="sec-hdr"><div class="sec-bar"></div><h2>💳 Loan & Debt Calculators</h2></div>
+    <p class="sec-desc">Calculate EMI for any loan, understand true credit card cost, compare loan terms, and find the fastest path to debt freedom.</p>
+    <div class="cgrid">
+      <a href="loan-calculator.html" class="ccard" data-name="Loan EMI Calculator"><span class="hot-tag">High Demand</span><span class="ic">💳</span><h3>Loan / EMI Calculator</h3><p>EMI for personal, home, auto & business loans</p></a>
+      <a href="auto-loan-calculator.html" class="ccard" data-name="Auto Loan Calculator"><span class="ic">🚗</span><h3>Auto Loan Calculator</h3><p>Car payment with tax, trade-in & down payment</p></a>
+      <a href="credit-card-interest-calculator.html" class="ccard" data-name="Credit Card Interest Calculator"><span class="new-tag">New</span><span class="ic">💳</span><h3>Credit Card Interest</h3><p>True monthly & yearly credit card cost</p></a>
+      <a href="credit-card-payoff-calculator.html" class="ccard" data-name="Credit Card Payoff Calculator"><span class="ic">✂️</span><h3>Credit Card Payoff</h3><p>Minimum vs fixed payment — interest saved</p></a>
+      <a href="debt-payoff-calculator.html" class="ccard" data-name="Debt Payoff Calculator"><span class="high-tag">High CPC</span><span class="ic">💰</span><h3>Debt Payoff Calculator</h3><p>Fastest strategy to become debt-free</p></a>
+    </div>
+  </section>
+
+  <section id="investment" class="sgap">
+    <div class="sec-hdr"><div class="sec-bar"></div><h2>📈 Investment & Savings Calculators</h2></div>
+    <p class="sec-desc">Plan your financial future. Compound interest, investment ROI, retirement savings, and inflation impact calculators.</p>
+    <div class="cgrid">
+      <a href="compound-interest-calculator.html" class="ccard" data-name="Compound Interest Calculator"><span class="hot-tag">Most Used</span><span class="ic">🔢</span><h3>Compound Interest</h3><p>Watch your money grow exponentially</p></a>
+      <a href="investment-calculator.html" class="ccard" data-name="Investment ROI Calculator"><span class="ic">📈</span><h3>Investment / ROI Calculator</h3><p>ROI, CAGR & portfolio growth projections</p></a>
+      <a href="retirement-calculator.html" class="ccard" data-name="Retirement Calculator"><span class="high-tag">High CPC</span><span class="ic">🏖️</span><h3>Retirement Calculator</h3><p>Are you on track? Savings & income check</p></a>
+      <a href="inflation-calculator.html" class="ccard" data-name="Inflation Calculator"><span class="ic">💹</span><h3>Inflation Calculator</h3><p>Real purchasing power of money over time</p></a>
+    </div>
+  </section>
+
+  <section id="tax-income" class="sgap">
+    <div class="sec-hdr"><div class="sec-bar"></div><h2>🧾 Tax & Income Calculators</h2></div>
+    <p class="sec-desc">See your real take-home pay after taxes, estimate income tax liability, and convert salary across time periods.</p>
+    <div class="cgrid">
+      <a href="salary-after-tax-calculator.html" class="ccard" data-name="Salary After Tax Calculator"><span class="hot-tag">Popular</span><span class="ic">💼</span><h3>Salary After Tax</h3><p>Real take-home — USA, UK, Canada, Australia</p></a>
+      <a href="income-tax-calculator.html" class="ccard" data-name="Income Tax Calculator"><span class="high-tag">High CPC</span><span class="ic">🧾</span><h3>Income Tax Calculator</h3><p>Federal tax estimate with 2026 brackets</p></a>
+      <a href="salary-calculator.html" class="ccard" data-name="Salary Calculator"><span class="ic">📊</span><h3>Salary Converter</h3><p>Hourly ↔ daily ↔ weekly ↔ annual rates</p></a>
+    </div>
+  </section>
+
+  <div class="why-sec">
+    <h2>Why People Use CalcHub</h2>
+    <div class="why-grid">
+      <div class="why-card"><div class="wi">⚡</div><h3>Instant Results</h3><p>Calculations run in your browser. Zero loading — results appear immediately.</p></div>
+      <div class="why-card"><div class="wi">🌍</div><h3>Any Currency</h3><p>Switch between USD, GBP, EUR, CAD, AUD, INR and more with one click.</p></div>
+      <div class="why-card"><div class="wi">🎯</div><h3>Bank-Grade Accuracy</h3><p>Industry-standard formulas — the same math banks and financial advisors use.</p></div>
+      <div class="why-card"><div class="wi">🔒</div><h3>100% Private</h3><p>Your financial data never leaves your device. Nothing stored. No sign-up needed.</p></div>
+    </div>
+  </div>
+
+  <!-- ===== AI ASSISTANT SECTION ===== -->
+  <section class="ai-section">
+    <h2>💡 Ask <span>CalcHub AI</span></h2>
+    <p class="ai-desc">
+      Have a financial question? Ask our AI assistant. It will explain concepts,
+      help you understand your numbers, and guide you to the right calculator.
+      Works in English and Hindi.
+    </p>
+
+    <!-- QUICK QUESTION CHIPS -->
+    <div class="ai-chips">
+      <button class="ai-chip" onclick="setQ('How much mortgage can I afford on $80,000 salary?')">💰 Mortgage on $80k salary?</button>
+      <button class="ai-chip" onclick="setQ('What is the difference between compound and simple interest?')">📈 Compound vs simple interest?</button>
+      <button class="ai-chip" onclick="setQ('How much should I save for retirement?')">🏖️ How much to save for retirement?</button>
+      <button class="ai-chip" onclick="setQ('How can I pay off credit card debt faster?')">✂️ Pay off credit card faster?</button>
+      <button class="ai-chip" onclick="setQ('$10,000 loan at 12% for 3 years, what is my EMI?')">💳 EMI for $10k loan at 12%?</button>
+    </div>
+
+    <div class="ai-input-wrap">
+      <input
+        type="text"
+        class="ai-input"
+        id="aiInput"
+        placeholder="Ask anything — e.g. How much house can I afford? | EMI kaise calculate karein?"
+        onkeydown="if(event.key==='Enter') askAI()"
+        maxlength="400"
+      >
+      <button class="ai-btn" id="aiBtn" onclick="askAI()">Ask AI →</button>
+    </div>
+
+    <div class="ai-response" id="aiResponse">
+      <div class="ai-res-label">CalcHub AI</div>
+      <div class="ai-res-text" id="aiText"></div>
+    </div>
+
+    <div class="ai-disclaimer">
+      ⚠️ AI responses are for informational purposes only. Not financial advice. Always consult a qualified advisor for important decisions.
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="ftr">
+    <div class="fgrid">
+      <div class="fcol">
+        <div class="fl">Calc<span>Hub</span></div>
+        <span class="ftag">A Sana Product</span>
+        <p class="fdesc">Free financial calculators built for everyone. CalcHub is a product of Sana, a technology company building useful digital products worldwide.</p>
+        <div class="fmeta">© 2026 CalcHub<br>A product of <strong style="color:#3b82f6;">Sana</strong><br>Not financial advice.</div>
+      </div>
+      <div class="fcol">
+        <h4>Home Loans</h4>
+        <a href="mortgage-calculator.html">🏠 Mortgage Calculator</a>
+        <a href="refinance-calculator.html">🔄 Refinance Calculator</a>
+        <a href="amortization-calculator.html">📊 Amortization</a>
+        <a href="home-affordability-calculator.html">🏡 Home Affordability</a>
+      </div>
+      <div class="fcol">
+        <h4>Loans & Debt</h4>
+        <a href="loan-calculator.html">💳 Loan / EMI Calculator</a>
+        <a href="auto-loan-calculator.html">🚗 Auto Loan</a>
+        <a href="credit-card-interest-calculator.html">💳 Card Interest</a>
+        <a href="credit-card-payoff-calculator.html">✂️ Card Payoff</a>
+        <a href="debt-payoff-calculator.html">💰 Debt Payoff</a>
+      </div>
+      <div class="fcol">
+        <h4>Investment & Tax</h4>
+        <a href="compound-interest-calculator.html">🔢 Compound Interest</a>
+        <a href="investment-calculator.html">📈 Investment / ROI</a>
+        <a href="retirement-calculator.html">🏖️ Retirement</a>
+        <a href="inflation-calculator.html">💹 Inflation</a>
+        <a href="salary-after-tax-calculator.html">💼 Salary After Tax</a>
+        <a href="income-tax-calculator.html">🧾 Income Tax</a>
+      </div>
+    </div>
+    <hr class="fdiv">
+    <div class="fbot">
+      <div class="fbot-left">© 2026 <strong style="color:#e2e8f0;">CalcHub</strong> — A product of <strong style="color:#3b82f6;">Sana</strong><br>Sana is a technology company building useful digital products for people worldwide. For informational purposes only. Not financial advice.</div>
+      <div class="fbot-right"><a href="privacy-policy.html">Privacy Policy</a><a href="mailto:hello@sana.com">Contact</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+var CURRENCIES={USD:{symbol:'$'},GBP:{symbol:'£'},EUR:{symbol:'€'},CAD:{symbol:'CA$'},AUD:{symbol:'A$'},INR:{symbol:'₹'},JPY:{symbol:'¥'},CHF:{symbol:'CHF '},SGD:{symbol:'S$'},AED:{symbol:'AED '}};
+function setCurrency(code){var c=CURRENCIES[code]||CURRENCIES.USD;document.getElementById('curr-display').textContent=c.symbol+code;localStorage.setItem('calchub_currency',code);localStorage.setItem('calchub_currency_symbol',c.symbol);}
+(function(){var s=localStorage.getItem('calchub_currency')||'USD';var sel=document.getElementById('globalCurr');if(sel)sel.value=s;setCurrency(s);})();
+function doSearch(q){q=q.toLowerCase().trim();var sections=document.querySelectorAll('section');if(!q){document.querySelectorAll('.ccard').forEach(function(c){c.classList.remove('hidden');});sections.forEach(function(s){s.classList.remove('hidden');});return;}document.querySelectorAll('.ccard').forEach(function(c){var n=(c.getAttribute('data-name')||'').toLowerCase();var t=c.textContent.toLowerCase();c.classList.toggle('hidden',!n.includes(q)&&!t.includes(q));});sections.forEach(function(s){var v=[...s.querySelectorAll('.ccard')].some(function(c){return!c.classList.contains('hidden');});s.classList.toggle('hidden',!v);});}
+
+// ===== AI ASSISTANT =====
+function setQ(q) {
+  document.getElementById('aiInput').value = q;
+  document.getElementById('aiInput').focus();
+}
+
+async function askAI() {
+  var input = document.getElementById('aiInput');
+  var btn = document.getElementById('aiBtn');
+  var resDiv = document.getElementById('aiResponse');
+  var textDiv = document.getElementById('aiText');
+  var prompt = input.value.trim();
+
+  if (!prompt) {
+    input.focus();
+    return;
+  }
+
+  // Show loading state
+  btn.disabled = true;
+  btn.textContent = '...';
+  resDiv.className = 'ai-response show';
+  textDiv.innerHTML = '<div class="ai-thinking"><div class="ai-dot"></div><div class="ai-dot"></div><div class="ai-dot"></div>&nbsp; CalcHub AI is thinking…</div>';
+
+  try {
+    var response = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt: prompt })
+    });
+
+    var data = await response.json();
+
+    if (data.error) {
+      textDiv.innerHTML = '<span style="color:#f87171;">⚠️ ' + data.error + '</span>';
+    } else {
+      // Format response - convert **bold** and newlines
+      var formatted = data.text
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\n/g, '<br>');
+      textDiv.innerHTML = formatted;
+    }
+
+  } catch (err) {
+    textDiv.innerHTML = '<span style="color:#f87171;">⚠️ Could not connect to AI. Please check your internet and try again.</span>';
+  }
+
+  btn.disabled = false;
+  btn.textContent = 'Ask AI →';
+}
+</script>
+</body>
+</html>

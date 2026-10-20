@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://calchub-online-gamma.vercel.app/sitemap.xml

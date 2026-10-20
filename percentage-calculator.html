@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Percentage Calculator – % of a Number, % Change, What Percent | CalcHub</title>
+<meta name="description" content="Free percentage calculator: find X% of a number, what percent one number is of another, and percentage increase or decrease, with the formula shown.">
+<link rel="canonical" href="https://calchub-online-gamma.vercel.app/percentage-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcHub">
+<meta property="og:title" content="Percentage Calculator – % of a Number, % Change, What Percent | CalcHub">
+<meta property="og:description" content="Free percentage calculator: find X% of a number, what percent one number is of another, and percentage increase or decrease, with the formula shown.">
+<meta property="og:url" content="https://calchub-online-gamma.vercel.app/percentage-calculator.html">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%230f172a%22/%3E%3Ctext x=%2232%22 y=%2244%22 font-size=%2236%22 text-anchor=%22middle%22 fill=%22%233b82f6%22 font-family=%22Arial%22 font-weight=%22700%22%3EC%3C/text%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DSB7Z1TD41"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500,region:["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "LV", "LI", "LT", "LU", "MT", "NL", "NO", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "GB", "CH"]});gtag('js',new Date());gtag('config','G-DSB7Z1TD41');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:#f8f9fa;color:#1a1a1a;font-size:15px;line-height:1.7;}
+a{text-decoration:none;color:inherit;}
+header{background:#0f172a;padding:0 20px;position:sticky;top:0;z-index:999;box-shadow:0 2px 20px rgba(0,0,0,.3);}
+.hdr{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.logo{font-size:20px;font-weight:800;color:#fff;letter-spacing:-0.5px;}
+.logo span{color:#3b82f6;}
+.logo small{font-size:10px;color:#64748b;display:block;font-weight:400;}
+nav a{font-size:13px;color:#94a3b8;padding:6px 12px;border-radius:6px;font-weight:500;transition:all .15s;margin-left:2px;}
+nav a:hover{background:#1e293b;color:#fff;}
+.bc{background:#fff;border-bottom:1px solid #e2e8f0;padding:10px 20px;font-size:13px;}
+.bci{max-width:1200px;margin:0 auto;color:#64748b;}
+.bc a{color:#3b82f6;}
+.bc span{margin:0 6px;color:#cbd5e1;}
+.hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 60%,#0f172a 100%);padding:48px 20px 56px;color:#fff;}
+.hero-inner{max-width:1200px;margin:0 auto;}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:#1e3a5f;border:1px solid #3b82f6;border-radius:20px;padding:5px 14px;font-size:12px;color:#93c5fd;margin-bottom:16px;}
+.hero h1{font-size:clamp(22px,4vw,40px);font-weight:800;line-height:1.2;margin-bottom:10px;letter-spacing:-1px;}
+.hero h1 .hl{color:#3b82f6;}
+.hook{background:linear-gradient(90deg,#dc2626,#b91c1c);border-radius:8px;padding:14px 18px;margin:16px 0 0;display:flex;align-items:center;gap:12px;}
+.hook p{font-size:14px;font-weight:600;color:#fff;line-height:1.5;}
+.hook p span{font-size:18px;color:#fef08a;}
+.wrap{max-width:1200px;margin:0 auto;padding:28px 20px;display:grid;grid-template-columns:1fr 340px;gap:28px;}
+.calc-wrap{background:#fff;border-radius:14px;box-shadow:0 2px 20px rgba(0,0,0,.06);overflow:hidden;}
+.calc-header{background:#0f172a;padding:18px 22px;display:flex;align-items:center;gap:10px;}
+.calc-header h2{font-size:16px;font-weight:700;color:#fff;margin:0;}
+.calc-header .badge{background:#3b82f6;color:#fff;font-size:11px;font-weight:600;padding:3px 8px;border-radius:10px;}
+.calc-body{padding:22px;}
+.stabs{display:flex;gap:6px;margin-bottom:20px;background:#f1f5f9;border-radius:8px;padding:4px;}
+.stab{flex:1;padding:8px;border:none;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;background:transparent;color:#64748b;transition:all .15s;}
+.stab.active{background:#fff;color:#0f172a;box-shadow:0 1px 4px rgba(0,0,0,.1);}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:14px;}
+.fg label{font-size:12px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:0.4px;}
+.fg input,.fg select{padding:11px 14px;border:1.5px solid #e2e8f0;border-radius:8px;font-size:14px;font-family:inherit;background:#f9fafb;color:#1a1a1a;width:100%;transition:border-color .15s;}
+.fg input:focus,.fg select:focus{outline:none;border-color:#3b82f6;background:#fff;box-shadow:0 0 0 3px rgba(59,130,246,.1);}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.cbtn{width:100%;padding:15px;background:linear-gradient(135deg,#3b82f6,#2563eb);color:#fff;border:none;border-radius:10px;font-size:16px;font-weight:800;cursor:pointer;font-family:inherit;margin-top:6px;touch-action:manipulation;transition:all .15s;}
+.cbtn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(37,99,235,.35);}
+.res-wrap{display:none;margin-top:18px;}
+.res-wrap.show{display:block;}
+.res-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px;}
+.res-card{background:#f8faff;border:1.5px solid #dbeafe;border-radius:10px;padding:14px;text-align:center;}
+.res-card.primary{background:linear-gradient(135deg,#eff6ff,#dbeafe);border-color:#93c5fd;}
+.res-label{font-size:10px;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;}
+.res-value{font-size:22px;font-weight:800;color:#2563eb;font-family:monospace;line-height:1;}
+.res-value.green{color:#16a34a;}
+.res-value.red{color:#dc2626;}
+.insight-box{background:linear-gradient(135deg,#fef2f2,#fee2e2);border:1.5px solid #fecaca;border-radius:10px;padding:16px;margin:14px 0;}
+.insight-box .ib-title{font-size:13px;font-weight:700;color:#991b1b;margin-bottom:6px;display:flex;align-items:center;gap:6px;}
+.insight-box p{font-size:13px;color:#7f1d1d;line-height:1.7;}
+.insight-box .big{font-size:20px;font-weight:800;color:#dc2626;}
+.warn-box{background:#fffbeb;border:1.5px solid #fcd34d;border-radius:10px;padding:14px;margin:10px 0;font-size:13px;color:#92400e;}
+.compare-wrap{background:#fff;border:1.5px solid #e2e8f0;border-radius:12px;padding:18px;margin-top:14px;}
+.compare-title{font-size:14px;font-weight:700;color:#1a1a1a;margin-bottom:14px;}
+.compare-table{width:100%;border-collapse:collapse;font-size:13px;}
+.compare-table th{background:#0f172a;color:#fff;padding:8px 12px;text-align:left;font-size:12px;}
+.compare-table td{padding:8px 12px;border-bottom:1px solid #f1f5f9;}
+.compare-table tr.best td{background:#f0fdf4;font-weight:700;color:#16a34a;}
+.prog-wrap{margin:14px 0;}
+.prog-label{display:flex;justify-content:space-between;font-size:12px;font-weight:600;margin-bottom:5px;}
+.prog-bar{height:10px;background:#e2e8f0;border-radius:10px;overflow:hidden;}
+.prog-fill{height:100%;border-radius:10px;transition:width .8s ease;}
+.prog-fill.blue{background:linear-gradient(90deg,#3b82f6,#2563eb);}
+.content-section{background:#fff;border-radius:14px;padding:28px;margin-top:24px;box-shadow:0 2px 12px rgba(0,0,0,.04);}
+.content-section h2{font-size:20px;font-weight:800;margin-bottom:14px;color:#0f172a;padding-bottom:10px;border-bottom:2px solid #e2e8f0;}
+.content-section h3{font-size:16px;font-weight:700;margin:20px 0 8px;color:#1e293b;}
+.content-section p{font-size:14px;color:#475569;line-height:1.9;margin-bottom:12px;}
+.content-section ul,.content-section ol{padding-left:20px;margin-bottom:12px;}
+.content-section li{font-size:14px;color:#475569;line-height:1.9;margin-bottom:4px;}
+.did-you-know{background:linear-gradient(135deg,#f0f9ff,#e0f2fe);border-left:4px solid #3b82f6;border-radius:0 10px 10px 0;padding:16px 18px;margin:18px 0;}
+.did-you-know .dyk-title{font-size:12px;font-weight:800;color:#0369a1;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;}
+.did-you-know p{font-size:14px;color:#0c4a6e;margin:0;font-weight:500;}
+.money-tip{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-left:4px solid #16a34a;border-radius:0 10px 10px 0;padding:16px 18px;margin:18px 0;}
+.money-tip .mt-title{font-size:12px;font-weight:800;color:#166534;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;}
+.money-tip p{font-size:14px;color:#14532d;margin:0;font-weight:500;}
+.example-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0;}
+.example-card{background:#f8faff;border:1.5px solid #dbeafe;border-radius:10px;padding:16px;}
+.example-card .flag{font-size:24px;margin-bottom:6px;}
+.example-card h4{font-size:13px;font-weight:700;color:#1e293b;margin-bottom:6px;}
+.example-card p{font-size:13px;color:#475569;line-height:1.7;margin:0;}
+.example-card .ex-num{font-size:20px;font-weight:800;color:#2563eb;margin:6px 0;}
+.ps-card{background:#fff;border:1.5px solid #e2e8f0;border-radius:10px;padding:18px;margin-bottom:12px;}
+.ps-problem{font-size:13px;font-weight:700;color:#dc2626;margin-bottom:8px;display:flex;align-items:center;gap:6px;}
+.ps-solution{font-size:13px;color:#475569;line-height:1.8;}
+.ps-solution .sol-tag{display:inline-block;background:#dcfce7;color:#166534;font-size:11px;font-weight:700;padding:2px 7px;border-radius:10px;margin-right:4px;}
+.faq-item{border-bottom:1px solid #f1f5f9;}
+.faq-item:last-child{border:none;}
+.faq-q{font-size:14px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:16px 0;color:#1e293b;touch-action:manipulation;}
+.faq-q:hover{color:#2563eb;}
+.faq-arrow{font-size:12px;color:#94a3b8;transition:transform .2s;flex-shrink:0;}
+.faq-item.open .faq-arrow{transform:rotate(180deg);}
+.faq-a{font-size:13px;color:#64748b;line-height:1.9;padding-bottom:14px;display:none;}
+.faq-item.open .faq-a{display:block;}
+.paa-item{background:#f8faff;border:1.5px solid #dbeafe;border-radius:10px;padding:14px 16px;margin-bottom:8px;cursor:pointer;}
+.paa-q{font-size:14px;font-weight:600;color:#1e293b;display:flex;justify-content:space-between;align-items:center;}
+.paa-a{font-size:13px;color:#64748b;line-height:1.8;margin-top:8px;display:none;padding-top:8px;border-top:1px solid #e2e8f0;}
+.paa-item.open .paa-a{display:block;}
+.sidebar{display:flex;flex-direction:column;gap:18px;}
+.side-card{background:#fff;border-radius:12px;padding:18px;box-shadow:0 2px 12px rgba(0,0,0,.04);}
+.side-card h3{font-size:13px;font-weight:700;margin-bottom:12px;padding-bottom:8px;border-bottom:1.5px solid #f1f5f9;color:#0f172a;text-transform:uppercase;letter-spacing:0.4px;}
+.side-links{list-style:none;}
+.side-links li{margin-bottom:6px;}
+.side-links li a{font-size:13px;color:#3b82f6;display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:7px;border:1px solid #e2e8f0;transition:all .15s;}
+.side-links li a:hover{background:#eff6ff;border-color:#93c5fd;}
+.adbox{background:#f8faff;border:1.5px dashed #cbd5e1;border-radius:10px;padding:14px;text-align:center;color:#94a3b8;font-size:12px;min-height:90px;display:flex;align-items:center;justify-content:center;}
+.qstats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+.qstat{background:#f1f5f9;border-radius:8px;padding:12px;text-align:center;}
+.qstat .qn{font-size:18px;font-weight:800;color:#2563eb;}
+.qstat .ql{font-size:11px;color:#64748b;margin-top:2px;}
+.try-next{background:linear-gradient(135deg,#0f172a,#1e3a5f);border-radius:12px;padding:20px;color:#fff;margin-top:14px;}
+.try-next h3{font-size:14px;font-weight:700;margin-bottom:12px;color:#93c5fd;}
+.try-links{display:flex;flex-direction:column;gap:8px;}
+.try-link{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:10px 12px;font-size:13px;color:#e2e8f0;transition:all .15s;}
+.try-link:hover{background:rgba(255,255,255,.12);color:#fff;}
+footer{background:#0f172a;color:#64748b;padding:44px 20px 20px;margin-top:56px;}
+.ftr{max-width:1200px;margin:0 auto;}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:28px;margin-bottom:32px;}
+.fcol .fl{font-size:18px;font-weight:800;color:#fff;margin-bottom:2px;}
+.fcol .fl span{color:#3b82f6;}
+.fcol .fs{font-size:11px;color:#475569;margin-bottom:10px;}
+.fcol h4{font-size:11px;font-weight:700;color:#475569;margin-bottom:10px;text-transform:uppercase;letter-spacing:0.5px;}
+.fcol a{display:block;font-size:12px;color:#64748b;margin-bottom:6px;transition:color .15s;}
+.fcol a:hover{color:#fff;}
+.fbot{border-top:1px solid #1e293b;padding-top:18px;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.fbot a{color:#3b82f6;}
+.hidden{display:none!important;}
+@media(max-width:900px){.wrap{grid-template-columns:1fr;}}
+@media(max-width:600px){.fr{grid-template-columns:1fr;}.res-grid{grid-template-columns:1fr;}.example-grid{grid-template-columns:1fr;}nav{display:none;}}
+
+.content-section table{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0 14px;}.content-section th,.content-section td{padding:8px 10px;border-bottom:1px solid #e2e8f0;text-align:left;}.content-section th{background:#f1f5f9;}.content-section a{color:#2563eb;}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Percentage Calculator", "url": "https://calchub-online-gamma.vercel.app/percentage-calculator.html", "description": "Free percentage calculator: find X% of a number, what percent one number is of another, and percentage increase or decrease, with the formula shown.", "applicationCategory": "UtilitiesApplication", "operatingSystem": "Any", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "dateModified": "2026-10-20"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calchub-online-gamma.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "Percentage Calculator", "item": "https://calchub-online-gamma.vercel.app/percentage-calculator.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I calculate a discount?", "acceptedAnswer": {"@type": "Answer", "text": "Multiply the price by (1 − discount ÷ 100). A 30% discount on $60 is 60 × 0.7 = $42."}}, {"@type": "Question", "name": "How do I reverse a percentage (find the original price before tax)?", "acceptedAnswer": {"@type": "Answer", "text": "Divide by (1 + rate ÷ 100). A $108 total that includes 8% tax had a pre-tax price of 108 ÷ 1.08 = $100."}}, {"@type": "Question", "name": "What is the difference between percent and percentile?", "acceptedAnswer": {"@type": "Answer", "text": "A percent is a fraction of 100. A percentile is a rank: scoring in the 90th percentile means you scored higher than 90% of the group."}}]}</script>
+</head>
+<body>
+<header><div class="hdr"><a href="index.html" class="logo">Calc<span>Hub</span><small>a Sana product</small></a><nav><a href="index.html#finance">Finance</a><a href="index.html#tax">Tax &amp; Pay</a><a href="index.html#health">Health</a><a href="index.html#math">Math</a></nav></div></header>
+<div class="bc"><div class="bci"><a href="index.html">Home</a><span>›</span><a href="index.html#math">Math</a><span>›</span><span>Percentage Calculator</span></div></div>
+<div class="hero"><div class="hero-inner"><div class="hero-badge">Updated October 2026 &nbsp;|&nbsp; Free &nbsp;|&nbsp; No sign-up</div>
+<h1>Percentage Calculator –<br><span class="hl">Three Calculators in One</span></h1><div class="hook"><p>What is 15% of 80? What percent is 30 of 120? How much did a price rise from $40 to $50? Each answer is one formula — shown with every result.</p></div></div></div>
+<div class="wrap"><div>
+<div class="calc-wrap"><div class="calc-header"><span style="font-size:20px;">➗</span><h2>Percentage Calculator</h2><span class="badge">FREE</span></div><div class="calc-body"><h3 style="font-size:14px;margin-bottom:8px">1. What is X% of Y?</h3><div class="fr"><div class="fg"><label for="p1a">Percent (%)</label><input type="number" id="p1a" value="15" step="any" inputmode="decimal"></div><div class="fg"><label for="p1b">Of number</label><input type="number" id="p1b" value="80" step="any" inputmode="decimal"></div></div><button class="cbtn" onclick="calcP1()">Calculate</button><div class="res-wrap" id="p1Res"></div><h3 style="font-size:14px;margin:18px 0 8px">2. X is what percent of Y?</h3><div class="fr"><div class="fg"><label for="p2a">X</label><input type="number" id="p2a" value="30" step="any" inputmode="decimal"></div><div class="fg"><label for="p2b">Y</label><input type="number" id="p2b" value="120" step="any" inputmode="decimal"></div></div><button class="cbtn" onclick="calcP2()">Calculate</button><div class="res-wrap" id="p2Res"></div><h3 style="font-size:14px;margin:18px 0 8px">3. Percentage change from X to Y</h3><div class="fr"><div class="fg"><label for="p3a">From</label><input type="number" id="p3a" value="40" step="any" inputmode="decimal"></div><div class="fg"><label for="p3b">To</label><input type="number" id="p3b" value="50" step="any" inputmode="decimal"></div></div><button class="cbtn" onclick="calcP3()">Calculate</button><div class="res-wrap" id="p3Res"></div></div></div>
+<div class="content-section"><h2>Percentage Formulas</h2><table><tr><th>Question</th><th>Formula</th><th>Example</th></tr>
+<tr><td>X% of Y</td><td>Y × X ÷ 100</td><td>15% of 80 = 12</td></tr>
+<tr><td>X is what % of Y</td><td>X ÷ Y × 100</td><td>30 of 120 = 25%</td></tr>
+<tr><td>% change</td><td>(new − old) ÷ old × 100</td><td>40 → 50 = +25%</td></tr>
+<tr><td>Add X% to Y</td><td>Y × (1 + X/100)</td><td>80 + 15% = 92</td></tr>
+<tr><td>Remove X% from Y</td><td>Y × (1 − X/100)</td><td>80 − 15% = 68</td></tr></table>
+<h3>Percentage change vs percentage points</h3><p>If an interest rate goes from 4% to 5%, it rose by <strong>1 percentage point</strong> but by <strong>25 percent</strong>. Mixing the two is one of the most common errors in news and finance.</p>
+<h3>Why a 50% drop needs a 100% gain</h3><p>Percentage changes are measured from the starting value. $100 falling 50% is $50; getting back to $100 from $50 is a 100% rise. That asymmetry is why investment losses hurt more than equal gains help.</p></div>
+<div class="content-section"><h2>Frequently Asked Questions</h2><div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How do I calculate a discount? <span class="faq-arrow">▼</span></div><div class="faq-a">Multiply the price by (1 − discount ÷ 100). A 30% discount on $60 is 60 × 0.7 = $42.</div></div><div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How do I reverse a percentage (find the original price before tax)? <span class="faq-arrow">▼</span></div><div class="faq-a">Divide by (1 + rate ÷ 100). A $108 total that includes 8% tax had a pre-tax price of 108 ÷ 1.08 = $100.</div></div><div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is the difference between percent and percentile? <span class="faq-arrow">▼</span></div><div class="faq-a">A percent is a fraction of 100. A percentile is a rank: scoring in the 90th percentile means you scored higher than 90% of the group.</div></div></div>
+</div><aside class="sidebar"><div class="side-card"><h3>Related Calculators</h3><ul class="side-links"><li><a href="age-calculator.html">🎂 Age Calculator</a></li><li><a href="mortgage-calculator.html">🏠 Mortgage Calculator</a></li><li><a href="loan-calculator.html">💳 Loan / EMI Calculator</a></li><li><a href="compound-interest-calculator.html">🔢 Compound Interest Calculator</a></li></ul></div></aside></div>
+<footer>
+  <div class="ftr">
+    <div class="fgrid">
+<div class="fcol"><div class="fl">Calc<span>Hub</span></div><div class="fs">a Sana product</div><p style="font-size:12px;color:#64748b;line-height:1.8;">Free calculators for mortgages, loans, savings, tax and everyday math. Estimates only — not financial, tax or medical advice.</p><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy Policy</a></div><div class="fcol"><h4>Home Loans</h4><a href="mortgage-calculator.html">🏠 Mortgage</a><a href="refinance-calculator.html">🔄 Refinance</a><a href="amortization-calculator.html">📊 Amortization</a><a href="home-affordability-calculator.html">🏡 Home Affordability</a></div><div class="fcol"><h4>Loans &amp; Debt</h4><a href="loan-calculator.html">💳 Loan / EMI</a><a href="auto-loan-calculator.html">🚗 Auto Loan</a><a href="credit-card-interest-calculator.html">💳 Credit Card Interest</a><a href="credit-card-payoff-calculator.html">✂️ Credit Card Payoff</a><a href="debt-payoff-calculator.html">💰 Debt Payoff</a></div><div class="fcol"><h4>Save &amp; Invest</h4><a href="compound-interest-calculator.html">🔢 Compound Interest</a><a href="savings-calculator.html">🏦 Savings</a><a href="investment-calculator.html">📈 Investment / ROI</a><a href="401k-calculator.html">🧓 401(k)</a><a href="retirement-calculator.html">🏖️ Retirement</a><a href="inflation-calculator.html">💹 Inflation</a></div><div class="fcol"><h4>Tax, Health &amp; Math</h4><a href="paycheck-calculator.html">🧾 Paycheck</a><a href="salary-after-tax-calculator.html">💼 Salary After Tax</a><a href="income-tax-calculator.html">🏛️ Income Tax</a><a href="salary-calculator.html">⏱️ Salary Converter</a><a href="bmi-calculator.html">❤️ BMI</a><a href="percentage-calculator.html">➗ Percentage</a><a href="age-calculator.html">🎂 Age</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 <strong style="color:#e2e8f0;">CalcHub</strong>. Figures last reviewed October 2026. For informational purposes only.</span><a href="privacy-policy.html">Privacy Policy</a></div>
+  </div>
+</footer>
+<script>
+function fm(n,d){d=d===undefined?2:d;return '$'+Number(n).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});}
+function fn(n,d){d=d===undefined?2:d;return Number(n).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});}
+function v(id){return +document.getElementById(id).value;}
+function showRes(id,html){var el=document.getElementById(id);if(el){el.innerHTML=html;el.className='res-wrap show';el.scrollIntoView({behavior:'smooth',block:'nearest'});}}
+function r6(x){return Math.round(x*1e6)/1e6;}
+function calcP1(){var a=v('p1a'),b=v('p1b');showRes('p1Res','<div class="res-card primary"><div class="res-label">'+fn(a,2)+'% of '+fn(b,2)+'</div><div class="res-value">'+r6(b*a/100)+'</div></div><p style="font-size:12px;color:#64748b;margin-top:6px">'+b+' × '+a+' ÷ 100</p>');}
+function calcP2(){var a=v('p2a'),b=v('p2b');if(b===0){showRes('p2Res','<div class="warn-box">Y cannot be zero.</div>');return;}showRes('p2Res','<div class="res-card primary"><div class="res-label">'+a+' is this percent of '+b+'</div><div class="res-value">'+r6(a/b*100)+'%</div></div><p style="font-size:12px;color:#64748b;margin-top:6px">'+a+' ÷ '+b+' × 100</p>');}
+function calcP3(){var a=v('p3a'),b=v('p3b');if(a===0){showRes('p3Res','<div class="warn-box">The starting value cannot be zero.</div>');return;}var c=(b-a)/Math.abs(a)*100;showRes('p3Res','<div class="res-card primary"><div class="res-label">Change from '+a+' to '+b+'</div><div class="res-value '+(c>=0?'green':'red')+'">'+(c>=0?'+':'')+r6(c)+'%</div></div><p style="font-size:12px;color:#64748b;margin-top:6px">('+b+' − '+a+') ÷ |'+a+'| × 100 · difference: '+r6(b-a)+'</p>');}
+</script>
+</body>
+</html>

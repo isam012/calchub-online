@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amortization Calculator – Loan Schedule with Extra Payments | CalcHub</title>
+<meta name="description" content="Free amortization calculator. Get a month-by-month principal and interest schedule and see how extra payments shorten your loan.">
+<link rel="canonical" href="https://calchub-online-gamma.vercel.app/amortization-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcHub">
+<meta property="og:title" content="Amortization Calculator – Loan Schedule with Extra Payments | CalcHub">
+<meta property="og:description" content="Free amortization calculator. Get a month-by-month principal and interest schedule and see how extra payments shorten your loan.">
+<meta property="og:url" content="https://calchub-online-gamma.vercel.app/amortization-calculator.html">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%230f172a%22/%3E%3Ctext x=%2232%22 y=%2244%22 font-size=%2236%22 text-anchor=%22middle%22 fill=%22%233b82f6%22 font-family=%22Arial%22 font-weight=%22700%22%3EC%3C/text%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DSB7Z1TD41"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500,region:["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "LV", "LI", "LT", "LU", "MT", "NL", "NO", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "GB", "CH"]});gtag('js',new Date());gtag('config','G-DSB7Z1TD41');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="google-site-verification" content="JEx3Q5bruk645FmL-3jORhNenlTzoXB96EmVAMGEuHA">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:#f5f4f0;color:#1a1a18;font-size:15px;line-height:1.7;}
+a{text-decoration:none;color:inherit;}
+header{background:#1a1a18;padding:0 16px;position:sticky;top:0;z-index:999;border-bottom:2px solid #333;}
+.hdr{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:54px;}
+.logo{font-size:20px;font-weight:700;color:#fff;}
+.logo span{color:#60a5fa;}
+.logo small{font-size:10px;color:#9ca3af;display:block;font-weight:400;}
+nav a{font-size:13px;color:#d1d5db;padding:5px 10px;border-radius:6px;margin-left:2px;}
+nav a:hover{background:#374151;color:#fff;}
+.bc{background:#fff;border-bottom:1px solid #e5e7eb;padding:10px 16px;font-size:13px;color:#6b7280;}
+.bci{max-width:1100px;margin:0 auto;}
+.bc a{color:#2563eb;}
+.bc span{margin:0 6px;}
+.phdr{background:#1a1a18;color:#fff;padding:32px 16px 40px;}
+.phdr .pi{max-width:1100px;margin:0 auto;}
+.phdr h1{font-size:clamp(20px,4vw,34px);font-weight:700;margin-bottom:8px;}
+.phdr p{color:#9ca3af;font-size:14px;max-width:560px;}
+.pwrap{max-width:1100px;margin:0 auto;padding:24px 16px;display:grid;grid-template-columns:1fr 300px;gap:24px;}
+.adbox{background:#f9f8f6;border:1.5px dashed #d6d0c4;border-radius:8px;padding:14px;text-align:center;color:#9ca3af;font-size:12px;min-height:90px;display:flex;align-items:center;justify-content:center;margin:14px 0;}
+.cbox{background:#fff;border:1.5px solid #e5e7eb;border-radius:10px;padding:22px;margin-bottom:16px;}
+.cbox h2{font-size:17px;font-weight:700;margin-bottom:18px;padding-bottom:12px;border-bottom:1.5px solid #e5e7eb;}
+.fg{display:flex;flex-direction:column;gap:4px;margin-bottom:12px;}
+.fg label{font-size:13px;font-weight:600;color:#374151;}
+.fg input,.fg select{padding:10px 12px;border:1.5px solid #d1d5db;border-radius:6px;font-size:14px;font-family:inherit;background:#f9fafb;width:100%;}
+.fg input:focus,.fg select:focus{outline:none;border-color:#2563eb;background:#fff;}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.cbtn{width:100%;padding:13px;background:#2563eb;color:#fff;border:none;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;margin-top:6px;touch-action:manipulation;}
+.cbtn:hover{background:#1d4ed8;}
+.cbtn:active{background:#1e40af;}
+.res{margin-top:14px;padding:16px;background:#eff6ff;border:1.5px solid #bfdbfe;border-radius:8px;display:none;}
+.res.show{display:block;}
+.rl{font-size:11px;color:#6b7280;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:4px;}
+.rv{font-size:30px;font-weight:700;color:#2563eb;font-family:monospace;}
+.rd{font-size:13px;color:#374151;margin-top:10px;line-height:2.2;}
+.faq-item{border-bottom:1px solid #f3f4f6;padding:12px 0;}
+.faq-item:last-child{border:none;}
+.faq-q{font-size:14px;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;gap:8px;touch-action:manipulation;}
+.faq-a{font-size:13px;color:#6b7280;line-height:1.8;margin-top:8px;display:none;}
+.faq-item.open .faq-a{display:block;}
+.sbox{background:#fff;border:1.5px solid #e5e7eb;border-radius:10px;padding:18px;margin-bottom:16px;}
+.sbox h3{font-size:13px;font-weight:700;margin-bottom:12px;padding-bottom:8px;border-bottom:1.5px solid #f3f4f6;}
+.slinks{list-style:none;}
+.slinks li{margin-bottom:6px;}
+.slinks li a{font-size:13px;color:#2563eb;display:flex;align-items:center;gap:6px;padding:3px 0;}
+.slinks li a:hover{color:#1d4ed8;}
+.tip-box{background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:8px;padding:14px;margin:14px 0;font-size:13px;color:#166534;}
+footer{background:#1a1a18;color:#9ca3af;padding:36px 16px 18px;margin-top:48px;}
+.ftr{max-width:1100px;margin:0 auto;}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:24px;margin-bottom:24px;}
+.fcol .fl{font-size:17px;font-weight:700;color:#fff;margin-bottom:2px;}
+.fcol .fl span{color:#60a5fa;}
+.fcol .fs{font-size:10px;color:#6b7280;margin-bottom:8px;}
+.fcol h4{font-size:11px;font-weight:600;color:#6b7280;margin-bottom:8px;text-transform:uppercase;letter-spacing:0.5px;}
+.fcol a{display:block;font-size:12px;color:#6b7280;margin-bottom:5px;}
+.fcol a:hover{color:#fff;}
+.fbot{border-top:1px solid #374151;padding-top:14px;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;}
+.fbot a{color:#60a5fa;}
+@media(max-width:768px){.pwrap{grid-template-columns:1fr;}.fr{grid-template-columns:1fr;}}
+
+.cbox p{margin-bottom:10px;color:#374151;font-size:14px;}.cbox h3{font-size:15px;font-weight:700;margin:16px 0 6px;}.cbox ul,.cbox ol{padding-left:20px;margin-bottom:10px;}.cbox li{margin-bottom:4px;font-size:14px;color:#374151;}.ctable{width:100%;border-collapse:collapse;font-size:13px;margin:10px 0 14px;}.ctable th,.ctable td{padding:7px 10px;border-bottom:1px solid #e5e7eb;text-align:left;}.ctable th{background:#f3f4f6;}.cbox a{color:#2563eb;}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Amortization Calculator", "url": "https://calchub-online-gamma.vercel.app/amortization-calculator.html", "description": "Free amortization calculator. Get a month-by-month principal and interest schedule and see how extra payments shorten your loan.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "isAccessibleForFree": true, "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "dateModified": "2026-10-20"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://calchub-online-gamma.vercel.app/"}, {"@type": "ListItem", "position": 2, "name": "Amortization Calculator", "item": "https://calchub-online-gamma.vercel.app/amortization-calculator.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is a biweekly payment plan worth it?", "acceptedAnswer": {"@type": "Answer", "text": "Paying half your monthly payment every two weeks makes 26 half-payments — 13 full payments a year instead of 12. The effect is the same as adding one-twelfth of a payment each month. Avoid services that charge a fee for this; you can do it yourself."}}, {"@type": "Question", "name": "Why do early payments go to interest?", "acceptedAnswer": {"@type": "Answer", "text": "Interest is calculated on remaining balance. Early on, balance is highest so interest is highest. More of each payment becomes principal over time."}}, {"@type": "Question", "name": "How much do extra payments save?", "acceptedAnswer": {"@type": "Answer", "text": "$100-200 extra/month on a typical mortgage saves tens of thousands and cuts years off the loan."}}, {"@type": "Question", "name": "What is negative amortization?", "acceptedAnswer": {"@type": "Answer", "text": "When minimum payment doesn't cover interest, balance grows instead of shrinking. Avoid loans with this feature."}}]}</script>
+</head>
+<body>
+<header>
+  <div class="hdr">
+    <a href="index.html" class="logo">Calc<span>Hub</span><small>a Sana product</small></a>
+    <nav><a href="index.html#finance">Finance</a><a href="index.html#tax">Tax &amp; Pay</a><a href="index.html#health">Health</a><a href="index.html#math">Math</a></nav>
+  </div>
+</header>
+<div class="bc"><div class="bci"><a href="index.html">Home</a><span>›</span><a href="index.html#finance">Finance</a><span>›</span><span>Amortization Calculator</span></div></div>
+<div class="phdr"><div class="pi"><h1>📊 Amortization Calculator</h1><p>View your full loan amortization schedule. See exactly how much goes to principal vs interest each month.</p></div></div>
+<div class="pwrap">
+  <div>
+    
+    <div class="cbox">
+      <h2>Amortization Calculator</h2>
+      <div class="fr"><div class="fg"><label>Loan Amount ($)</label><input type="number" id="al" value="200000"></div><div class="fg"><label>Annual Rate (%)</label><input type="number" id="ar" value="7" step="0.01"></div></div>
+<div class="fr"><div class="fg"><label>Loan Term (years)</label><input type="number" id="at" value="30"></div><div class="fg"><label>Extra Monthly Payment ($)</label><input type="number" id="aex" value="0"></div></div>
+<button class="cbtn" onclick="calcAmort()">Generate Schedule</button>
+<div class="res" id="amres"></div>
+    </div>
+    <div class="cbox">
+      <h2>How an Amortization Schedule Works</h2>
+      <p>A fixed-rate loan has one payment for its whole life, calculated as <strong>M = P × r(1+r)<sup>n</sup> ÷ [(1+r)<sup>n</sup> − 1]</strong>, where P is the loan, r the monthly rate and n the number of payments. Each month, interest = remaining balance × r. The rest of the payment reduces principal.</p>
+      <h3>Example: $200,000 at 7% for 30 years</h3>
+      <ul><li>Monthly payment: <strong>$1,330.60</strong></li>
+      <li>Month 1 interest: $1,166.67 — only $163.93 reduces the balance</li>
+      <li>Total interest over 30 years: <strong>about $279,000</strong></li></ul>
+      <p>Early payments are mostly interest because the balance is at its highest. The split flips over time: in the final years almost the whole payment is principal.</p>
+      <div class="tip-box">💡 Adding $100 a month to that $200,000 loan pays it off about 5 years 9 months early and saves roughly $63,000 in interest. Enter it in the Extra Monthly Payment box to see your own numbers.</div>
+      <h3>Before you prepay</h3>
+      <ul><li>Confirm the loan has no prepayment penalty.</li><li>Tell the lender to apply extra money to principal, not to next month's payment.</li><li>Keep an emergency fund first — money paid into a mortgage is hard to get back out.</li></ul>
+    </div>
+    <div class="cbox">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is a biweekly payment plan worth it? <span>▼</span></div><div class="faq-a">Paying half your monthly payment every two weeks makes 26 half-payments — 13 full payments a year instead of 12. The effect is the same as adding one-twelfth of a payment each month. Avoid services that charge a fee for this; you can do it yourself.</div></div><div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Why do early payments go to interest? <span>▼</span></div><div class="faq-a">Interest is calculated on remaining balance. Early on, balance is highest so interest is highest. More of each payment becomes principal over time.</div></div><div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How much do extra payments save? <span>▼</span></div><div class="faq-a">$100-200 extra/month on a typical mortgage saves tens of thousands and cuts years off the loan.</div></div><div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">What is negative amortization? <span>▼</span></div><div class="faq-a">When minimum payment doesn't cover interest, balance grows instead of shrinking. Avoid loans with this feature.</div></div>
+    </div>
+    
+  </div>
+  <aside>
+    
+    <div class="sbox">
+      <h3>Related Calculators</h3>
+      <ul class="slinks"><li><a href="mortgage-calculator.html">🏠 Mortgage</a></li>
+<li><a href="refinance-calculator.html">🔄 Refinance</a></li>
+<li><a href="loan-calculator.html">💳 Loan/EMI</a></li>
+<li><a href="auto-loan-calculator.html">🚗 Auto Loan</a></li></ul>
+    </div>
+    <div class="sbox">
+      <h3>All Categories</h3>
+      <ul class="slinks">
+        <li><a href="index.html#finance">💰 Financial</a></li>
+        <li><a href="bmi-calculator.html">❤️ Health</a></li>
+        <li><a href="percentage-calculator.html">📐 Math</a></li>
+        <li><a href="index.html#tax">🧾 Tax &amp; Pay</a></li>
+      </ul>
+    </div>
+    
+  </aside>
+</div>
+<footer>
+  <div class="ftr">
+    <div class="fgrid">
+<div class="fcol"><div class="fl">Calc<span>Hub</span></div><div class="fs">a Sana product</div><p style="font-size:12px;color:#64748b;line-height:1.8;">Free calculators for mortgages, loans, savings, tax and everyday math. Estimates only — not financial, tax or medical advice.</p><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy Policy</a></div><div class="fcol"><h4>Home Loans</h4><a href="mortgage-calculator.html">🏠 Mortgage</a><a href="refinance-calculator.html">🔄 Refinance</a><a href="amortization-calculator.html">📊 Amortization</a><a href="home-affordability-calculator.html">🏡 Home Affordability</a></div><div class="fcol"><h4>Loans &amp; Debt</h4><a href="loan-calculator.html">💳 Loan / EMI</a><a href="auto-loan-calculator.html">🚗 Auto Loan</a><a href="credit-card-interest-calculator.html">💳 Credit Card Interest</a><a href="credit-card-payoff-calculator.html">✂️ Credit Card Payoff</a><a href="debt-payoff-calculator.html">💰 Debt Payoff</a></div><div class="fcol"><h4>Save &amp; Invest</h4><a href="compound-interest-calculator.html">🔢 Compound Interest</a><a href="savings-calculator.html">🏦 Savings</a><a href="investment-calculator.html">📈 Investment / ROI</a><a href="401k-calculator.html">🧓 401(k)</a><a href="retirement-calculator.html">🏖️ Retirement</a><a href="inflation-calculator.html">💹 Inflation</a></div><div class="fcol"><h4>Tax, Health &amp; Math</h4><a href="paycheck-calculator.html">🧾 Paycheck</a><a href="salary-after-tax-calculator.html">💼 Salary After Tax</a><a href="income-tax-calculator.html">🏛️ Income Tax</a><a href="salary-calculator.html">⏱️ Salary Converter</a><a href="bmi-calculator.html">❤️ BMI</a><a href="percentage-calculator.html">➗ Percentage</a><a href="age-calculator.html">🎂 Age</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 <strong style="color:#e2e8f0;">CalcHub</strong>. Figures last reviewed October 2026. For informational purposes only.</span><a href="privacy-policy.html">Privacy Policy</a></div>
+  </div>
+</footer>
+<script>
+function fm(n,d){d=d===undefined?2:d;return Number(n).toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});}
+function showRes(id,html){var el=document.getElementById(id);if(el){el.innerHTML=html;el.className='res show';el.scrollIntoView({behavior:'smooth',block:'nearest'});}}
+function calcAmort(){var P=+document.getElementById('al').value;var r=+document.getElementById('ar').value/100/12;var n=+document.getElementById('at').value*12;var ex=+document.getElementById('aex').value;var M=P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1)+ex;if(r===0)r=1e-9;var M=P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1)+ex;var bal=P,ti=0,tp=0,mo=0,rows='';while(bal>0.01&&mo<600){mo++;var ip=bal*r;var pp=Math.min(M-ip,bal);bal-=pp;ti+=ip;tp+=ip+pp;if(mo<=12||mo%12===0)rows+='<tr><td style="padding:5px 8px;border-bottom:1px solid #f3f4f6;">'+mo+'</td><td style="padding:5px 8px;border-bottom:1px solid #f3f4f6;">$'+fm(ip+pp)+'</td><td style="padding:5px 8px;border-bottom:1px solid #f3f4f6;color:#16a34a;">$'+fm(pp)+'</td><td style="padding:5px 8px;border-bottom:1px solid #f3f4f6;color:#dc2626;">$'+fm(ip)+'</td><td style="padding:5px 8px;border-bottom:1px solid #f3f4f6;">$'+fm(Math.max(bal,0))+'</td></tr>';}showRes('amres','<div class="rl">Monthly Payment</div><div class="rv">$'+fm(M)+'</div><div class="rd">📅 Paid off in: <strong>'+mo+' months ('+fm(mo/12,1)+' yrs)</strong><br>💵 Total Paid: <strong>$'+fm(tp,0)+'</strong><br>📈 Total Interest: <strong>$'+fm(ti,0)+'</strong></div><div style="overflow-x:auto;margin-top:14px;"><table style="width:100%;border-collapse:collapse;font-size:12px;"><thead><tr style="background:#2563eb;color:#fff;"><th style="padding:6px 8px;text-align:left;">Month</th><th style="padding:6px 8px;text-align:left;">Payment</th><th style="padding:6px 8px;text-align:left;">Principal</th><th style="padding:6px 8px;text-align:left;">Interest</th><th style="padding:6px 8px;text-align:left;">Balance</th></tr></thead><tbody>'+rows+'</tbody></table></div><p style="font-size:11px;color:#9ca3af;margin-top:6px;">Showing first 12 months + annual summaries</p>');}
+
+</script>
+</body>
+</html>

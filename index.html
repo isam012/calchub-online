@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CalcHub – Free Mortgage, Loan, Paycheck & Tax Calculators (2026)</title>
+<meta name="description" content="Free online calculators for mortgages, loans, credit cards, savings, 401(k), paycheck and 2026 income tax, plus BMI, percentage and age. No sign-up.">
+<link rel="canonical" href="https://calchub-online-gamma.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CalcHub">
+<meta property="og:title" content="CalcHub – Free Mortgage, Loan, Paycheck & Tax Calculators (2026)">
+<meta property="og:description" content="Free online calculators for mortgages, loans, credit cards, savings, 401(k), paycheck and 2026 income tax, plus BMI, percentage and age. No sign-up.">
+<meta property="og:url" content="https://calchub-online-gamma.vercel.app/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Crect width=%2264%22 height=%2264%22 rx=%2214%22 fill=%22%230f172a%22/%3E%3Ctext x=%2232%22 y=%2244%22 font-size=%2236%22 text-anchor=%22middle%22 fill=%22%233b82f6%22 font-family=%22Arial%22 font-weight=%22700%22%3EC%3C/text%3E%3C/svg%3E">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DSB7Z1TD41"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500,region:["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IS", "IE", "IT", "LV", "LI", "LT", "LU", "MT", "NL", "NO", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "GB", "CH"]});gtag('js',new Date());gtag('config','G-DSB7Z1TD41');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="google-site-verification" content="JEx3Q5bruk645FmL-3jORhNenlTzoXB96EmVAMGEuHA">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Inter',sans-serif;background:#f8f9fa;color:#1a1a1a;font-size:15px;line-height:1.6;}
+a{text-decoration:none;color:inherit;}
+
+/* HEADER */
+header{background:#0f172a;padding:0 20px;position:sticky;top:0;z-index:999;box-shadow:0 2px 20px rgba(0,0,0,.3);}
+.hdr{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px;}
+.logo{font-size:22px;font-weight:800;color:#fff;letter-spacing:-0.5px;cursor:pointer;}
+.logo span{color:#3b82f6;}
+.logo small{font-size:10px;color:#64748b;display:block;font-weight:400;letter-spacing:0.3px;}
+
+nav{display:flex;gap:2px;}
+nav a{font-size:13px;color:#94a3b8;padding:6px 10px;border-radius:6px;font-weight:500;transition:all .15s;}
+nav a:hover{background:#1e293b;color:#fff;}
+
+/* SEARCH BAR */
+.search-wrap{background:#1e293b;border-bottom:1px solid #334155;padding:12px 20px;}
+.search-inner{max-width:1200px;margin:0 auto;display:flex;gap:10px;align-items:center;}
+.search-inner input{flex:1;padding:10px 16px;background:#0f172a;border:1.5px solid #334155;border-radius:8px;color:#e2e8f0;font-size:14px;font-family:inherit;max-width:520px;}
+.search-inner input:focus{outline:none;border-color:#3b82f6;}
+.search-inner input::placeholder{color:#475569;}
+.curr-badge{display:flex;align-items:center;gap:6px;background:#0f172a;border:1px solid #334155;border-radius:8px;padding:6px 12px;font-size:12px;color:#94a3b8;}
+.curr-badge strong{color:#3b82f6;}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 50%,#0f172a 100%);padding:52px 20px 60px;text-align:center;color:#fff;}
+.hero h1{font-size:clamp(24px,5vw,48px);font-weight:800;letter-spacing:-1.5px;margin-bottom:12px;line-height:1.1;}
+.hero h1 em{color:#3b82f6;font-style:normal;}
+.hero p{color:#94a3b8;font-size:15px;max-width:520px;margin:0 auto 10px;}
+.hero-sub{font-size:13px;color:#475569;margin-bottom:0;}
+
+/* STATS ROW */
+.stats-row{background:#1e293b;border-top:1px solid #334155;border-bottom:1px solid #334155;padding:16px 20px;}
+.stats-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:48px;flex-wrap:wrap;}
+.stat{text-align:center;}
+.stat .sn{font-size:20px;font-weight:800;color:#3b82f6;}
+.stat .sl{font-size:11px;color:#64748b;margin-top:2px;text-transform:uppercase;letter-spacing:0.5px;}
+
+/* MAIN */
+.main{max-width:1200px;margin:0 auto;padding:40px 20px;}
+
+/* SECTION HEADER */
+.sec-hdr{display:flex;align-items:center;gap:14px;margin-bottom:8px;}
+.sec-bar{width:4px;height:32px;background:linear-gradient(180deg,#3b82f6,#2563eb);border-radius:4px;flex-shrink:0;}
+.sec-hdr h2{font-size:22px;font-weight:800;color:#0f172a;letter-spacing:-0.5px;}
+.sec-desc{font-size:14px;color:#64748b;margin-bottom:24px;padding-left:18px;border-left:2px solid #e2e8f0;line-height:1.7;}
+
+/* CALCULATOR GRID */
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;margin-bottom:48px;}
+
+/* CALC CARD */
+.ccard{background:#fff;border:1.5px solid #e2e8f0;border-radius:12px;padding:20px;display:block;transition:all .2s;position:relative;cursor:pointer;}
+.ccard:hover{border-color:#3b82f6;box-shadow:0 8px 24px rgba(59,130,246,.12);transform:translateY(-3px);}
+.ccard:active{transform:translateY(-1px);}
+.ccard .ic{font-size:28px;margin-bottom:12px;display:block;}
+.ccard h3{font-size:14px;font-weight:700;margin-bottom:5px;color:#0f172a;line-height:1.3;}
+.ccard p{font-size:12px;color:#64748b;line-height:1.6;}
+.hot-tag{position:absolute;top:10px;right:10px;font-size:9px;font-weight:800;background:linear-gradient(135deg,#f59e0b,#d97706);color:#fff;padding:3px 7px;border-radius:10px;text-transform:uppercase;letter-spacing:0.3px;}
+.new-tag{position:absolute;top:10px;right:10px;font-size:9px;font-weight:800;background:linear-gradient(135deg,#10b981,#059669);color:#fff;padding:3px 7px;border-radius:10px;text-transform:uppercase;letter-spacing:0.3px;}
+
+/* CATEGORY COLORS */
+.ccard[data-cat="mortgage"]:hover{border-color:#2563eb;}
+.ccard[data-cat="loan"]:hover{border-color:#7c3aed;}
+.ccard[data-cat="investment"]:hover{border-color:#059669;}
+.ccard[data-cat="tax"]:hover{border-color:#dc2626;}
+
+/* WHY SECTION */
+.why-section{background:#fff;border:1.5px solid #e2e8f0;border-radius:16px;padding:36px;margin:48px 0;}
+.why-section h2{font-size:22px;font-weight:800;margin-bottom:24px;text-align:center;color:#0f172a;}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;}
+.why-card{text-align:center;padding:20px 16px;background:#f8faff;border-radius:12px;border:1.5px solid #dbeafe;}
+.why-card .wi{font-size:36px;margin-bottom:10px;}
+.why-card h3{font-size:14px;font-weight:700;margin-bottom:6px;color:#0f172a;}
+.why-card p{font-size:12px;color:#64748b;line-height:1.7;}
+
+/* FOOTER */
+footer{background:#0f172a;color:#64748b;padding:52px 20px 24px;margin-top:56px;}
+.ftr{max-width:1200px;margin:0 auto;}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+.fcol .fl{font-size:22px;font-weight:800;color:#fff;margin-bottom:4px;}
+.fcol .fl span{color:#3b82f6;}
+.fcol .ftag{font-size:11px;color:#3b82f6;font-weight:600;letter-spacing:0.5px;margin-bottom:12px;display:block;}
+.fcol p{font-size:13px;color:#475569;line-height:1.8;margin-bottom:16px;}
+.fcol .fmeta{font-size:12px;color:#334155;}
+.fcol h4{font-size:11px;font-weight:700;color:#94a3b8;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.8px;}
+.fcol a{display:block;font-size:13px;color:#475569;margin-bottom:8px;transition:color .15s;}
+.fcol a:hover{color:#e2e8f0;}
+.fdivider{border:none;border-top:1px solid #1e293b;margin:0 0 24px;}
+.fbot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center;}
+.fbot-left{font-size:12px;color:#334155;line-height:1.8;}
+.fbot-right{display:flex;gap:20px;}
+.fbot-right a{font-size:12px;color:#475569;transition:color .15s;}
+.fbot-right a:hover{color:#fff;}
+
+/* HIDDEN */
+.hidden{display:none!important;}
+
+/* RESPONSIVE */
+@media(max-width:900px){.fgrid{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){nav{display:none;}.cgrid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));}.fgrid{grid-template-columns:1fr;}.stats-inner{gap:24px;}}
+.fcol p{font-size:12px;}.fbot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;border-top:1px solid #1e293b;padding-top:18px;font-size:12px;}.fbot a{color:#3b82f6;}
+@media(max-width:900px){.fgrid{grid-template-columns:1fr 1fr;}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "CalcHub", "url": "https://calchub-online-gamma.vercel.app/", "description": "Free online calculators for mortgages, loans, credit cards, savings, 401(k), paycheck and 2026 income tax, plus BMI, percentage and age. No sign-up."}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "CalcHub", "url": "https://calchub-online-gamma.vercel.app/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ItemList", "itemListElement": [{"@type": "ListItem", "position": 1, "url": "https://calchub-online-gamma.vercel.app/mortgage-calculator.html", "name": "Mortgage Calculator"}, {"@type": "ListItem", "position": 2, "url": "https://calchub-online-gamma.vercel.app/refinance-calculator.html", "name": "Refinance Calculator"}, {"@type": "ListItem", "position": 3, "url": "https://calchub-online-gamma.vercel.app/amortization-calculator.html", "name": "Amortization Calculator"}, {"@type": "ListItem", "position": 4, "url": "https://calchub-online-gamma.vercel.app/home-affordability-calculator.html", "name": "Home Affordability Calculator"}, {"@type": "ListItem", "position": 5, "url": "https://calchub-online-gamma.vercel.app/loan-calculator.html", "name": "Loan / EMI Calculator"}, {"@type": "ListItem", "position": 6, "url": "https://calchub-online-gamma.vercel.app/auto-loan-calculator.html", "name": "Auto Loan Calculator"}, {"@type": "ListItem", "position": 7, "url": "https://calchub-online-gamma.vercel.app/credit-card-interest-calculator.html", "name": "Credit Card Interest Calculator"}, {"@type": "ListItem", "position": 8, "url": "https://calchub-online-gamma.vercel.app/credit-card-payoff-calculator.html", "name": "Credit Card Payoff Calculator"}, {"@type": "ListItem", "position": 9, "url": "https://calchub-online-gamma.vercel.app/debt-payoff-calculator.html", "name": "Debt Payoff Calculator"}, {"@type": "ListItem", "position": 10, "url": "https://calchub-online-gamma.vercel.app/compound-interest-calculator.html", "name": "Compound Interest Calculator"}, {"@type": "ListItem", "position": 11, "url": "https://calchub-online-gamma.vercel.app/savings-calculator.html", "name": "Savings Calculator"}, {"@type": "ListItem", "position": 12, "url": "https://calchub-online-gamma.vercel.app/investment-calculator.html", "name": "Investment / ROI Calculator"}, {"@type": "ListItem", "position": 13, "url": "https://calchub-online-gamma.vercel.app/401k-calculator.html", "name": "401(k) Calculator"}, {"@type": "ListItem", "position": 14, "url": "https://calchub-online-gamma.vercel.app/retirement-calculator.html", "name": "Retirement Calculator"}, {"@type": "ListItem", "position": 15, "url": "https://calchub-online-gamma.vercel.app/inflation-calculator.html", "name": "Inflation Calculator"}, {"@type": "ListItem", "position": 16, "url": "https://calchub-online-gamma.vercel.app/paycheck-calculator.html", "name": "Paycheck Calculator"}, {"@type": "ListItem", "position": 17, "url": "https://calchub-online-gamma.vercel.app/salary-after-tax-calculator.html", "name": "Salary After Tax Calculator"}, {"@type": "ListItem", "position": 18, "url": "https://calchub-online-gamma.vercel.app/income-tax-calculator.html", "name": "Income Tax Calculator"}, {"@type": "ListItem", "position": 19, "url": "https://calchub-online-gamma.vercel.app/salary-calculator.html", "name": "Salary Converter Calculator"}, {"@type": "ListItem", "position": 20, "url": "https://calchub-online-gamma.vercel.app/bmi-calculator.html", "name": "BMI Calculator"}, {"@type": "ListItem", "position": 21, "url": "https://calchub-online-gamma.vercel.app/percentage-calculator.html", "name": "Percentage Calculator"}, {"@type": "ListItem", "position": 22, "url": "https://calchub-online-gamma.vercel.app/age-calculator.html", "name": "Age Calculator"}]}</script>
+</head>
+<body>
+
+<header>
+  <div class="hdr">
+    <a href="index.html" class="logo">Calc<span>Hub</span><small>a Sana product</small></a>
+    <nav><a href="#finance">Finance</a><a href="#tax">Tax &amp; Pay</a><a href="#health">Health</a><a href="#math">Math</a></nav>
+  </div>
+</header>
+
+<div class="search-wrap">
+  <div class="search-inner">
+    <input type="search" id="srch" aria-label="Search calculators" placeholder="Search calculators — mortgage, EMI, compound interest…" oninput="doSearch(this.value)">
+  </div>
+</div>
+
+<div class="hero">
+  <h1>Free Financial <em>Calculators</em></h1>
+  <p>Mortgage, loan, savings, paycheck, tax, BMI and percentage calculators.<br>2026 tax figures. Free, no sign-up, nothing you type leaves your browser.</p>
+</div>
+
+<div class="stats-row">
+  <div class="stats-inner">
+    <div class="stat"><div class="sn">22</div><div class="sl">Calculators</div></div>
+    <div class="stat"><div class="sn">2026</div><div class="sl">Tax figures</div></div>
+    <div class="stat"><div class="sn">100%</div><div class="sl">Free</div></div>
+    <div class="stat"><div class="sn">0</div><div class="sl">Sign-ups needed</div></div>
+  </div>
+</div>
+
+<main class="main">
+<span id="finance"></span>
+<section id="home-loans">
+<div class="sec-hdr"><div class="sec-bar"></div><h2>🏠 Home Loan Calculators</h2></div>
+<p class="sec-desc">Mortgage payments with tax, refinancing break-even, full amortization schedules and how much house you can afford.</p>
+<div class="cgrid">
+<a href="mortgage-calculator.html" class="ccard" data-name="Mortgage Calculator"><span class="hot-tag">Most Popular</span><span class="ic">🏠</span><h3>Mortgage Calculator</h3><p>Monthly payment, total interest, rate comparison</p></a>
+<a href="refinance-calculator.html" class="ccard" data-name="Refinance Calculator"><span class="ic">🔄</span><h3>Refinance Calculator</h3><p>Break-even month and lifetime savings</p></a>
+<a href="amortization-calculator.html" class="ccard" data-name="Amortization Calculator"><span class="ic">📊</span><h3>Amortization Calculator</h3><p>Month-by-month principal vs interest</p></a>
+<a href="home-affordability-calculator.html" class="ccard" data-name="Home Affordability Calculator"><span class="ic">🏡</span><h3>Home Affordability Calculator</h3><p>Max home price with tax, insurance &amp; PMI</p></a>
+</div>
+</section>
+<section id="personal-finance">
+<div class="sec-hdr"><div class="sec-bar"></div><h2>💳 Loan &amp; Debt Calculators</h2></div>
+<p class="sec-desc">Loan payments, car loans, credit card interest and the fastest way to pay off debt.</p>
+<div class="cgrid">
+<a href="loan-calculator.html" class="ccard" data-name="Loan / EMI Calculator"><span class="ic">💳</span><h3>Loan / EMI Calculator</h3><p>Payment, total interest, compare terms</p></a>
+<a href="auto-loan-calculator.html" class="ccard" data-name="Auto Loan Calculator"><span class="ic">🚗</span><h3>Auto Loan Calculator</h3><p>Car payment with tax and trade-in</p></a>
+<a href="credit-card-interest-calculator.html" class="ccard" data-name="Credit Card Interest Calculator"><span class="ic">💳</span><h3>Credit Card Interest Calculator</h3><p>Monthly interest and the minimum-payment trap</p></a>
+<a href="credit-card-payoff-calculator.html" class="ccard" data-name="Credit Card Payoff Calculator"><span class="ic">✂️</span><h3>Credit Card Payoff Calculator</h3><p>Time to pay off your card</p></a>
+<a href="debt-payoff-calculator.html" class="ccard" data-name="Debt Payoff Calculator"><span class="ic">💰</span><h3>Debt Payoff Calculator</h3><p>Your debt-free date</p></a>
+</div>
+</section>
+<section id="investment">
+<div class="sec-hdr"><div class="sec-bar"></div><h2>📈 Savings &amp; Investing Calculators</h2></div>
+<p class="sec-desc">Compound interest, savings growth, 401(k) with employer match, retirement readiness and inflation.</p>
+<div class="cgrid">
+<a href="compound-interest-calculator.html" class="ccard" data-name="Compound Interest Calculator"><span class="hot-tag">Most Used</span><span class="ic">🔢</span><h3>Compound Interest Calculator</h3><p>Growth with monthly contributions</p></a>
+<a href="savings-calculator.html" class="ccard" data-name="Savings Calculator"><span class="new-tag">New</span><span class="ic">🏦</span><h3>Savings Calculator</h3><p>High-yield savings and APY growth</p></a>
+<a href="investment-calculator.html" class="ccard" data-name="Investment / ROI Calculator"><span class="ic">📈</span><h3>Investment / ROI Calculator</h3><p>ROI, CAGR and goal planning</p></a>
+<a href="401k-calculator.html" class="ccard" data-name="401(k) Calculator"><span class="new-tag">New</span><span class="ic">🧓</span><h3>401(k) Calculator</h3><p>Employer match and 2026 limits</p></a>
+<a href="retirement-calculator.html" class="ccard" data-name="Retirement Calculator"><span class="ic">🏖️</span><h3>Retirement Calculator</h3><p>Are you on track? 25x rule check</p></a>
+<a href="inflation-calculator.html" class="ccard" data-name="Inflation Calculator"><span class="ic">💹</span><h3>Inflation Calculator</h3><p>Purchasing power over time</p></a>
+</div>
+</section>
+<section id="tax">
+<div class="sec-hdr"><div class="sec-bar"></div><h2>🧾 Tax &amp; Pay Calculators</h2></div>
+<p class="sec-desc">2026 paycheck and federal income tax estimates, salary after tax for the US, UK, Canada and Australia, and pay-period conversions.</p>
+<div class="cgrid">
+<a href="paycheck-calculator.html" class="ccard" data-name="Paycheck Calculator"><span class="hot-tag">2026</span><span class="ic">🧾</span><h3>Paycheck Calculator</h3><p>Take-home pay per paycheck (2026)</p></a>
+<a href="salary-after-tax-calculator.html" class="ccard" data-name="Salary After Tax Calculator"><span class="ic">💼</span><h3>Salary After Tax Calculator</h3><p>US, UK, Canada, Australia take-home</p></a>
+<a href="income-tax-calculator.html" class="ccard" data-name="Income Tax Calculator"><span class="ic">🏛️</span><h3>Income Tax Calculator</h3><p>2026 federal brackets and effective rate</p></a>
+<a href="salary-calculator.html" class="ccard" data-name="Salary Converter Calculator"><span class="ic">⏱️</span><h3>Salary Converter Calculator</h3><p>Hourly ↔ weekly ↔ annual</p></a>
+</div>
+</section>
+<section id="health">
+<div class="sec-hdr"><div class="sec-bar"></div><h2>❤️ Health Calculators</h2></div>
+<p class="sec-desc">Adult body mass index with WHO categories and a healthy weight range for your height.</p>
+<div class="cgrid">
+<a href="bmi-calculator.html" class="ccard" data-name="BMI Calculator"><span class="new-tag">New</span><span class="ic">❤️</span><h3>BMI Calculator</h3><p>Adult BMI and healthy weight range</p></a>
+</div>
+</section>
+<section id="math">
+<div class="sec-hdr"><div class="sec-bar"></div><h2>➗ Math &amp; Everyday Calculators</h2></div>
+<p class="sec-desc">Percentages, percentage change and exact age between two dates.</p>
+<div class="cgrid">
+<a href="percentage-calculator.html" class="ccard" data-name="Percentage Calculator"><span class="new-tag">New</span><span class="ic">➗</span><h3>Percentage Calculator</h3><p>% of, what %, % change</p></a>
+<a href="age-calculator.html" class="ccard" data-name="Age Calculator"><span class="new-tag">New</span><span class="ic">🎂</span><h3>Age Calculator</h3><p>Exact age in years, months, days</p></a>
+</div>
+</section>
+<div class="why-section">
+    <h2>Why Use CalcHub</h2>
+    <div class="why-grid">
+      <div class="why-card"><div class="wi">⚡</div><h3>Instant Results</h3><p>Every calculation runs in your browser. Click calculate and the answer is there — no loading, no account.</p></div>
+      <div class="why-card"><div class="wi">📅</div><h3>Current Figures</h3><p>Tax pages use 2026 IRS brackets, the 2026 Social Security wage base and 2026 401(k) limits. Reviewed October 2026.</p></div>
+      <div class="why-card"><div class="wi">🎯</div><h3>Formulas Shown</h3><p>Each page explains the formula and a worked example, so you can check the numbers yourself.</p></div>
+      <div class="why-card"><div class="wi">🔒</div><h3>Private</h3><p>Nothing you type is sent to a server or stored. We use anonymous analytics only.</p></div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="ftr">
+    <div class="fgrid">
+<div class="fcol"><div class="fl">Calc<span>Hub</span></div><div class="fs">a Sana product</div><p style="font-size:12px;color:#64748b;line-height:1.8;">Free calculators for mortgages, loans, savings, tax and everyday math. Estimates only — not financial, tax or medical advice.</p><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy-policy.html">Privacy Policy</a></div><div class="fcol"><h4>Home Loans</h4><a href="mortgage-calculator.html">🏠 Mortgage</a><a href="refinance-calculator.html">🔄 Refinance</a><a href="amortization-calculator.html">📊 Amortization</a><a href="home-affordability-calculator.html">🏡 Home Affordability</a></div><div class="fcol"><h4>Loans &amp; Debt</h4><a href="loan-calculator.html">💳 Loan / EMI</a><a href="auto-loan-calculator.html">🚗 Auto Loan</a><a href="credit-card-interest-calculator.html">💳 Credit Card Interest</a><a href="credit-card-payoff-calculator.html">✂️ Credit Card Payoff</a><a href="debt-payoff-calculator.html">💰 Debt Payoff</a></div><div class="fcol"><h4>Save &amp; Invest</h4><a href="compound-interest-calculator.html">🔢 Compound Interest</a><a href="savings-calculator.html">🏦 Savings</a><a href="investment-calculator.html">📈 Investment / ROI</a><a href="401k-calculator.html">🧓 401(k)</a><a href="retirement-calculator.html">🏖️ Retirement</a><a href="inflation-calculator.html">💹 Inflation</a></div><div class="fcol"><h4>Tax, Health &amp; Math</h4><a href="paycheck-calculator.html">🧾 Paycheck</a><a href="salary-after-tax-calculator.html">💼 Salary After Tax</a><a href="income-tax-calculator.html">🏛️ Income Tax</a><a href="salary-calculator.html">⏱️ Salary Converter</a><a href="bmi-calculator.html">❤️ BMI</a><a href="percentage-calculator.html">➗ Percentage</a><a href="age-calculator.html">🎂 Age</a></div>
+    </div>
+    <div class="fbot"><span>© 2026 <strong style="color:#e2e8f0;">CalcHub</strong>. Figures last reviewed October 2026. For informational purposes only.</span><a href="privacy-policy.html">Privacy Policy</a></div>
+  </div>
+</footer>
+
+<script>
+// ======= SEARCH =======
+function doSearch(q) {
+  q = q.toLowerCase().trim();
+  var sections = document.querySelectorAll('section');
+
+  if (!q) {
+    document.querySelectorAll('.ccard').forEach(function(c){ c.classList.remove('hidden'); });
+    sections.forEach(function(s){ s.classList.remove('hidden'); });
+    return;
+  }
+
+  document.querySelectorAll('.ccard').forEach(function(c) {
+    var name = (c.getAttribute('data-name') || '').toLowerCase();
+    var text = c.textContent.toLowerCase();
+    c.classList.toggle('hidden', !name.includes(q) && !text.includes(q));
+  });
+
+  sections.forEach(function(s) {
+    var visible = [...s.querySelectorAll('.ccard')].some(function(c){ return !c.classList.contains('hidden'); });
+    s.classList.toggle('hidden', !visible);
+  });
+}
+</script>
+</body>
+</html>
